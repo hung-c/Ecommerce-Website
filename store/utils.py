@@ -60,3 +60,23 @@ def cartData(request):
 
     return {'items': items, 'order': order, 'cartItems': cartItems} 
     
+
+def guessOrder(request, data):
+    name = data['form']['name']
+    email = data['form']['email']
+
+    cookieData = cookieCart(request)
+    items = cookieData['items']
+
+    customer, created = Customer.objects.get_or_create(email=email, name = name)
+    customer.save()
+
+    order = Order.objects.create(customer=customer, complete = False)
+
+    for item in items: 
+        product = Product.objects.get(id=item['id'])
+        orderItem = OrderItem.objects.create(product=product,
+                                                order=order,
+                                                quantity=item['quantity']) 
+    
+    return customer, order
