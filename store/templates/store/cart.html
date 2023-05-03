@@ -19,7 +19,7 @@
             </div>
 
             <br>
-            {% for item in items %}
+            
             <div class="box-element">
                 <div class="cart-row">
                     <div style="flex:2"></div>
@@ -28,7 +28,7 @@
                     <div style="flex:1"><strong>Quantity</strong></div>
                     <div style="flex:1"><strong>Total</strong></div>
                 </div>
-                
+                {% for item in items %}
                 <div class="cart-row">
                     <div style="flex:2"><img class="row-image" src="{{ item.product.imageURL }}"></div>
                     <div style="flex:2"><p>{{item.product.name}}</p></div>
@@ -43,8 +43,9 @@
                     </div>
                     <div style="flex:1"><p>${{item.get_total}}</p></div>
                 </div>
+                {% endfor %}
             </div>
-            {% endfor %}
+            
         </div>
     </div>
 {% endblock content %}

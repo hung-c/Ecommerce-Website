@@ -5,6 +5,11 @@ from .utils import cookieCart, cartData, guessOrder
 import json 
 import datetime
 # Create your views here.
+def home(request):
+    context = {'pageName': 'home'}
+    print(context['pageName'])
+    return render(request, 'store/home.html', context)
+
 def store(request):
     data = cartData(request)
     cartItems = data['cartItems']
@@ -12,7 +17,7 @@ def store(request):
     items = data['items']
 
     products = Product.objects.all()
-    context = {'products': products, 'cartItems':cartItems}
+    context = {'products': products, 'cartItems':cartItems, 'pageName': 'hots'}
     return render(request, 'store/store.html', context)
 
 def cart(request):  
