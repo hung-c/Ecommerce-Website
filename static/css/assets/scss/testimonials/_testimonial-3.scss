@@ -1,0 +1,187 @@
+// Testimonial css
+
+.testimonial-wrapper {
+
+  .testimonial-title {
+    text-align: center;
+    margin-bottom: 50px;
+
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 16px;
+
+    }
+  }
+
+  .testimonial-title-2 {
+    margin-bottom: 50px;
+    text-align: center;
+
+    span {
+      font-size: 20px;
+      font-weight: 700;
+      color: $primary-color;
+      margin-bottom: 15px;
+    }
+    h1 {
+      margin-bottom: 5px;
+    }
+
+    .separator {
+      width: 80px;
+      height: 4px;
+      background: $primary-color;
+      border-radius: 30px;
+      margin: auto;
+      margin-left: -18px;
+      position: relative;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        right: -16px;
+        width: 10px;
+        height: 4px;
+        background: $primary-color;
+        border-radius: 30px;
+      }
+
+      &::after {
+        right: -32px;
+      }
+    }
+  }
+
+  .testimonial-style-3-wrapper {
+    position: relative;
+    
+    .tns-nav {
+      position: absolute;
+      width: 100%;
+      bottom: 0px;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+
+      button {
+        width: 12px;
+        height: 12px;
+        border: 2px solid $primary-color;
+        background: none;
+        border-radius: 50%;
+        margin: 5px;
+
+        &.hover,
+        &.tns-nav-active {
+          background: $primary-color;
+        }
+      }
+    }
+
+    .tns-controls {
+      width: 100%;
+      position: absolute;
+      z-index: 2;
+      left: 0;
+      top: 50%;
+      @include transform(translateY(-50%));
+      display: flex;
+      justify-content: space-between;
+
+      button {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid $gray-2;
+        font-size: 20px;
+        background: none;
+        border-radius: 50%;
+        color: $gray-2;
+        position: relative;
+        left: -40px;
+
+        &[data-controls="next"] {
+          left: auto;
+          right: -40px;
+        }
+
+        &:hover {
+          background: $primary-color;
+          color: $white-color;
+          border-color: transparent;
+        }
+      }
+    }
+
+    .testimonial-style-3 {
+      text-align: center;
+      margin-bottom: 40px;
+
+      .testimonial-img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        border: 5px solid $white-color;
+        overflow: hidden;
+        margin: 0 auto 30px;
+        @include box-shadow(0 10px 30px rgba(0, 0, 0, .1));
+      }
+
+      .testimonial-content {
+        margin-bottom: 30px;
+
+        p {
+          font-size: 18px;
+          line-height: 28px;
+        }
+      }
+
+      .testimonial-info {
+
+        h3 {
+          font-size: 20px;
+          font-weight: 500;
+          margin-bottom: 5px;
+        }
+      }
+    }
+
+    .slick-arrow {
+      position: absolute;
+      top: 50%;
+      @include transform(translateY(-50%));
+      left: -50px;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid $gray-2;
+      background: none;
+      border-radius: 50%;
+      @include transition(.3s);
+      z-index: 99;
+      cursor: pointer;
+
+      &:hover {
+        background: $primary-color;
+        color: $white-color;
+      }
+
+      &.next {
+        right: -50px;
+        left: auto;
+      }
+    }
+  }
+
+
+}

@@ -1,0 +1,191 @@
+
+
+/*=====   Filter Style 2 Style =====*/
+
+
+.filter-style-9{
+    padding: 16px;
+    border-radius: 8px;
+    @include box-shadow (2px 2px 8px rgba($dark-color, 0.32));
+    margin-top: 16px;
+
+    & .filter-title{
+        & .title{
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 40px;
+            color: $dark-color;
+            display: block;
+            position: relative;
+
+            &::before{
+                position: absolute;
+                content: "\F0143";
+                font-family: "Material Design Icons";
+                top: 50%;
+                @include transform(translateY(-50%));
+                right: 0;
+                font-size: 24px;
+                color: $primary-color;
+            }
+
+            &.collapsed{
+                &::before{
+                    content: "\F0140";
+                }
+            }
+        }
+    }
+    
+    & .filter-platform{
+        padding-top: 8px;   
+
+        & ul{
+            & li{}
+        }
+
+        & .platform-check{ 
+            position: relative;
+            margin-top: 8px;
+
+            & input[type="checkbox"] {
+                display: none;
+        
+                & + label {
+                    & span {
+                        width: 17px;
+                        height: 17px;
+                        border: 2px solid rgba($dark-color, 0.64);
+                        border-radius: 4px;
+                        cursor: pointer;
+                        position: relative;
+                        display: inline-block;
+                        margin: 0 8px -3px 0;
+                        @include transition(0.4s);
+        
+                        &::before {
+                            position: absolute;
+                            content: '\F012C';
+                            font-family: "Material Design Icons";
+                            -webkit-font-smoothing: antialiased;
+                            -moz-osx-font-smoothing: grayscale;
+                            top: 0;
+                            left: -1px;
+                            width: 100%;
+                            height: 100%;
+                            @include transition(0.4s);
+                            line-height: 0.8;
+                            font-size: 16px;
+                            color: $white-color;
+                            opacity: 0;
+                            visibility: hidden;
+                        }
+                    }
+                }
+        
+                &:checked {
+                    & + label {
+                        & span {
+                            background-color: $primary-color;
+                            border-color: $primary-color;
+
+                            &::before {
+                                opacity: 1;
+                                visibility: visible;
+                            }
+                        }
+                    }
+                }
+            }
+
+            & label{
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 24px;
+                color: $dark-color;
+                position: relative;
+                display: block;
+                cursor: pointer;
+            }
+            & .count{
+                height: 20px;
+                line-height: 20px;
+                padding: 0 8px;
+                border-radius: 18px;
+                font-weight: 500;
+                font-size: 12px;
+                background-color: $gray-4;
+                color: rgba($dark-color, 0.64);
+                float: right;
+                display: block;
+                margin-top: 3px;
+                position: absolute;
+                top: 50%;
+                right: 0;
+                @include transform(translateY(-50%));
+            }
+        }
+    
+    }
+    
+    &.filter-dark{
+        background-color: $secondary-3-variant;
+
+        & .filter-title{
+            & .title{
+                color: $white-color;
+    
+                &::before{
+                    color: $secondary-1-color;
+                }
+            }
+        }
+
+        & .filter-platform{
+            padding-top: 16px;   
+    
+            & ul{
+                & li{}
+            }
+    
+            & .platform-check{    
+                & input[type="checkbox"] {            
+                    & + label {
+                        & span {
+                            border: 2px solid rgba($white-color, 0.64);
+                        }
+                    }
+            
+                    &:checked {
+                        & + label {
+                            & span {
+                                background-color: $secondary-1-color;
+                                border-color: $secondary-1-color;
+                            }
+                        }
+                    }
+                }
+    
+                & label{
+                    color: $white-color;
+                }
+                & .count{
+                    background-color: rgba($white-color, 0.24);
+                    color: rgba($white-color, 0.64);                    
+                }
+            }        
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

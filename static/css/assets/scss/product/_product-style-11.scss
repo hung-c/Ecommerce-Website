@@ -1,0 +1,158 @@
+
+
+/*===== All Product Style 11 =====*/
+
+
+
+.product-style-11{
+    background-color: $white-light;
+
+    & .product-image{
+        position: relative;
+
+        & .product-active{
+            & .product-item{
+                & img{
+                    width: 100%;
+                }
+            }         
+            & .slick-arrow{
+                position: absolute;
+                top: 50%;
+                @include transform(translateY(-50%));
+                @include transition(0.3s);
+                bottom: auto;
+                left: 4px;
+                width: 32px;
+                height: 32px;
+                line-height: 32px;
+                text-align: center;
+                color: rgba($dark-color, 0.38);
+                font-size: 32px;
+                z-index: 5;
+                cursor: pointer;
+    
+                &:hover{
+                    color: $dark-color;
+                }
+                &.next{
+                    right: 4px;
+                    left: auto;
+                }
+            }   
+        }        
+
+        & .add-wishlist{
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            font-size: 24px;
+            color: $secondary-1-color;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            z-index: 9;
+            @include transition(0.3s);
+
+            &:hover{
+                color: $primary-color;
+            }
+        }
+    }
+
+    & .product-content{        
+        position: relative;
+        z-index: 5;
+        padding: 15px 20px 20px;
+
+        @media #{$lg}{
+            padding: 20px 15px 25px;
+        }
+        @media #{$md}{
+            padding: 20px 15px 25px;
+        }
+        @media #{$xs}{
+            padding: 20px 10px 25px;
+        }
+
+        & .rating{
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 22px;
+            color: $dark-variant;
+
+            @media #{$lg}{
+                font-size: 14px;
+                line-height: 20px;
+            }
+
+            & i{
+                color: $caution-color;
+                font-size: 24px;
+            }
+        }
+
+        & .title{
+            & a{
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 30px;
+                color: $dark-color;
+                @include transition(0.3s);
+                margin-top: 4px;
+
+                @media #{$lg}{
+                    font-size: 20px;
+                }
+                @media #{$md}{
+                    font-size: 20px;
+                }
+                @media #{$xs}{
+                    font-size: 18px;
+                }
+
+                &:hover{
+                    color: $primary-color;
+                }
+            }
+        }
+        & p{
+            color: rgba($dark-color, 0.74);
+            font-size: 16px;
+            line-height: 22px;
+            font-weight: 400;
+            margin-top: 4px;
+        }
+        & .price{
+            font-weight: 500;
+            font-size: 24px;
+            color: $secondary-1-color ;
+            line-height: 30px;
+            margin-top: 8px;
+            display: block;
+        }
+        & .main-btn{
+            margin-top: 12px;
+            font-weight: 700;
+            letter-spacing: 0;
+            text-transform: capitalize;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

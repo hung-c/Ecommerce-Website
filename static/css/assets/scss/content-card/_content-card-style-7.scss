@@ -1,0 +1,151 @@
+
+
+/*===== All Content Card Style 7 =====*/
+
+.content-card-7-wrapper {
+    position: relative;
+
+    .tns-nav {
+        position: absolute;
+        bottom: 30px;
+        left: 0;
+        width: 100%;
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        button {
+            background: rgba($dark-color, 0.38);
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            font-size: 0;
+            border: 0;
+            @include transition(0.3s);
+            margin: 0 10px;
+    
+            &.tns-nav-active {
+                background-color: $primary-color;
+                @include transform(scale(2));
+            }
+        }
+    }
+}
+
+
+
+.content-card-style-7{ 
+    & .single-content-card{
+        position: relative; 
+        height: 640px;
+
+        @media #{$xs}{
+            height: 580px;
+        }
+        @media #{$sm}{
+            height: 640px;
+        }
+
+        & .content-card{
+            position: absolute;
+            max-width: 480px;
+            padding: 40px;
+            background-color: rgba($white-color, 0.6);
+            top: 50%;
+            left: 0;
+            @include transform(translateY(-50%));
+            width: 100%;
+
+            @media #{$xs}{
+                width: 80%;
+                padding: 20px;
+            }
+            @media #{$sm}{
+                max-width: 420px;
+                padding: 30px;
+            }
+
+            
+            & .title{
+                font-weight: 300;
+                font-size: 44px;
+                line-height: 55px;
+                color: $dark-color;
+
+                @media #{$xs}{
+                    font-size: 30px;
+                    line-height: 40px;
+                }
+                @media #{$sm}{
+                    font-size: 40px;
+                    line-height: 50px;
+                }
+            }
+            & .content-link{
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 24px;
+                color: $primary-color;
+                text-transform: uppercase;
+                margin-top: 26px;
+
+                @media #{$xs}{
+                    font-size: 14px;
+                }
+                @media #{$sm}{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    &.content-active{
+        & .slick-dots{
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            @include transform(translateX(-50%));
+
+            & li{
+                display: inline-block;
+                margin: 0 10px;
+
+                & button{
+                    background: rgba($dark-color, 0.38);
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    font-size: 0;
+                    border: 0;
+                    @include transition(0.3s);
+                }
+
+                &.slick-active{
+                    & button{
+                        background-color: $primary-color;
+                        @include transform(scale(2));
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

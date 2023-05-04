@@ -1,0 +1,124 @@
+
+
+/*=====  Search Style 05 =====*/
+
+.search-style-5{    
+    position: relative;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+
+    & .search-select{
+        .select-position {
+            position: relative;
+
+            select {
+                padding-right: 30px;
+            }
+          
+            &::after {
+                border-bottom: 2px solid $primary-color;
+                border-right: 2px solid $primary-color;
+                content: '';
+                display: block;
+                height: 8px;
+                margin-top: -4px;
+                pointer-events: none;
+                position: absolute;
+                right: 15px;
+                top: 50%;
+                -webkit-transform-origin: 66% 66%;
+                -ms-transform-origin: 66% 66%;
+                transform-origin: 66% 66%;
+                -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+                -webkit-transition: all 0.15s ease-in-out;
+                transition: all 0.15s ease-in-out;
+                width: 8px;
+            }
+        }
+
+    }
+    
+    & .search-input{
+        width: 100%;
+
+        & input{
+            width: 100%;
+            height: 40px;
+            border: 1px solid $gray-3;
+            background-color: $white-color;
+            color: $dark-color;
+            border-radius: 0;
+            padding: 0 15px;
+            @include transition(0.3s);
+                        
+            &:focus{
+                border-color: $primary-color;
+            }
+        }
+    }
+
+    & .search-btn{
+        & button{
+            background-color: $primary-color;
+            color: $white-color;
+            width: 40px;
+            height: 40px;
+            padding: 0;
+            font-size: 20px;
+            border: 0;
+            border-radius: 4px;
+            margin-left: -2px;
+        }
+    }
+    
+
+    &.search-dark{
+        
+        .select-position {
+
+            &::after {
+                border-color: $white-color;
+            }
+        }
+
+        & input{
+            border: 1px solid rgba($white-color, 0.24);
+            background-color: transparent;
+            color: $white-color;
+            @include placeholder{
+                opacity: 0.6;
+                color: $white-light;
+            }
+
+            &:focus{
+                border-color: $secondary-2-color;
+            }
+        }
+        & button{
+            background-color: $secondary-2-color;
+            color: $white-color;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

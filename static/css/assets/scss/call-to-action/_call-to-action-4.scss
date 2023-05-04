@@ -1,0 +1,29 @@
+// call to action css
+
+.cta-style-4 {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  .cta-content {
+
+    @media #{$xs} {
+      text-align: center;
+    }
+
+    h1 {
+
+      @media #{$md} {
+        font-size: 40px;
+      }
+
+      @media #{$xs} {
+        font-size: 30px;
+      }
+
+      @media #{$sm} {
+        font-size: 40px;
+      }
+    }
+  }
+}

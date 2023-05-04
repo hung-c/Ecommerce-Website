@@ -1,0 +1,115 @@
+
+
+/*===== All Content Card Style 6 =====*/
+
+.content-card-style-6{ 
+    background: linear-gradient(180deg, $white-variant 0%, $white-color 100%);
+    position: relative;
+
+    & .content-card-title{
+        & .sub-title{
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 30px;
+            color: rgba($dark-color, 0.64);
+
+            @media #{$lg}{
+                font-size: 20px;
+                line-height: 26px;
+            }
+            @media #{$md}{
+                font-size: 20px;
+                line-height: 26px;
+            }
+            @media #{$xs}{
+                font-size: 20px;
+                line-height: 26px;
+            }
+        }
+        & .main-title{
+            font-weight: 500;
+            font-size: 52px;
+            line-height: 65px;
+            color: $dark-color;
+            margin-top: 16px;
+
+            @media #{$lg}{
+                font-size: 36px;
+                line-height: 45px;
+            }
+            @media #{$md}{
+                font-size: 36px;
+                line-height: 45px;
+            }
+            @media #{$xs}{
+                font-size: 36px;
+                line-height: 45px;
+            }
+        }
+    }
+
+    & .single-content-card{
+        & .content-card-image{
+            & img{
+                width: 100%;
+            }
+        }
+        & .content-card-content{
+            padding-top: 25px;
+            
+            & .title{
+                & a{
+                    font-weight: 500;
+                    font-size: 24px;
+                    line-height: 30px;
+                    color: $dark-color;
+                    @include transition(0.3s);
+
+                    @media #{$md}{
+                        font-size: 18px;
+                        line-height: 25px;
+                    }
+                    @media #{$xs}{
+                        font-size: 18px;
+                    }
+                    @media #{$sm}{
+                        font-size: 22px;
+                    }
+
+                    &:hover{
+                        color: $primary-color;
+                    }
+                }
+            }
+            & p{
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 22px;
+                color: $dark-color;
+                margin-top: 8px;
+            }
+
+            & .main-btn{
+                margin-top: 16px;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

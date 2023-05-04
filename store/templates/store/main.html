@@ -2,15 +2,6 @@
 {% load static %}
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/navbar.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/footer.css' %}">
-
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
     <!-- Cookies Functions -->
     <script type="text/javascript"> 
       var user = '{{request.user}}'
@@ -43,128 +34,296 @@
       console.log('Cart:', cart)
     </script>
 
-    <!-- Navbar Responsive Functions -->
-    <script type="text/javascript">
-      window.onload = function() {
-        var pageName = '{{pageName}}'
-        console.log(pageName)
-        if(pageName != "")
-        {
-          var element = document.getElementById("nav"+ pageName);
-          element.classList.add("active");
-        }
-      }
-    </script>
+    <title>Make It Real</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!--====== Favicon Icon ======-->
+    <link rel="shortcut icon" href="{% static 'css/assets/images/favicon.png' %}" type="image/png">
 
-    <title>Ecom</title>
+    <!--====== Tiny Slider CSS ======-->
+    <link rel="stylesheet" href="{% static 'css/assets/css/tiny-slider.css' %}">
+
+    <!--====== Line Icons CSS ======-->
+    <link rel="stylesheet" href="{% static 'css/assets/css/LineIcons.css' %}">
+
+    <!--====== Material Design Icons CSS ======-->
+    <link rel="stylesheet" href="{% static 'css/assets/css/materialdesignicons.min.css' %}">
+
+    <!--====== Bootstrap CSS ======-->
+    <link rel="stylesheet" href="{% static 'css/assets/css/bootstrap.min.css' %}">
+
+    <!--====== gLightBox CSS ======-->
+    <link rel="stylesheet" href="{% static 'css/assets/css/glightbox.min.css' %}">
+
+    <!--====== nouiSlider CSS ======-->
+    <link rel="stylesheet" href="{% static 'css/assets/css/nouislider.min.css' %}">
+
+    <!--====== Default CSS ======-->
+    <link rel="stylesheet" href="{% static 'css/assets/css/default.css' %}">
+
+    <!--====== Style CSS ======-->
+    <link rel="stylesheet" href="{% static 'css/assets/css/style.css' %}">
+
 </head>
 <body>
   <!-- Navbar  -->
-  <div>
-    <div class="overlay"></div>
-
-    <div class="utility-nav d-none d-md-block">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-md-6">
-            <p class="small"><i class="fas fa-envelope"></i> suppot@example.com | <i class="fas fa-phone-square-alt"></i> +919876543210
-            </p>
-          </div>
-
-          <div class="col-12 col-md-6 text-right">
-            <p class="small">Free shipping on total of $99 of all products</p>
+  <header class="menu-style-7 position-relative">
+    <div class="navbar-container navbar-sidebar-7">
+      
+      <!-- navbar top Start -->
+      <div class="navbar-top-wrapper">
+        <div class="container-lg">
+          <div class="navbar-top d-flex justify-content-between">
+            <!-- navbar top left Start -->
+            <div class="navbar-top-left">
+              <ul class="navbar-top-link">
+                <li><a href="#0">Trợ&nbsp;Giúp</a></li>
+                <li><a href="#0">Liên&nbsp;Hệ</a></li>
+              </ul>
+            </div>
+            <!-- navbar top left Ends -->
+            <!-- navbar top right Start -->
+            <div class="navbar-top-right">
+              <ul class="navbar-top-link">           
+                <li><a href="#0"><i class="mdi mdi-account"></i>Login</a></li>
+              </ul>
+            </div>
+            <!-- navbar top right Ends -->
           </div>
         </div>
       </div>
-    </div>
+      <!-- navbar top Ends -->
+      
+      <!-- main navbar Start -->
+      <div class="navbar-wrapper">
+        <div class="container-lg">
+          <nav class="main-navbar d-lg-flex justify-content-between align-items-center">
+            <!-- desktop logo Start -->
+            <div class="desktop-logo d-lg-block">
+              <a href="#0"><img src="{% static 'css/assets/images/logo.svg' %}" alt="Logo"></a>
+            </div>
+            <!-- desktop logo Ends -->
+            <div class="navbar-menu-toggle d-lg-block">
+              <button id="toggle-menu-6" class="menu-toggle">
+                <span class="toggle-icon"></span>
+                <span class="toggle-icon"></span>
+                <span class="toggle-icon"></span>
+                <span class="toggle-icon"></span>
 
-    <nav class="navbar navbar-expand-md navbar-light bg-light main-menu" style="box-shadow:none">
-      <div class="container">
-
-        <button type="button" id="sidebarCollapse" class="btn btn-link d-block d-md-none">
-                    <i class="fas fa-bars"></i>
-                </button>
-
-        <a class="navbar-brand" href="#">
-          <h4 class="font-weight-bold">Logo</h4>
-        </a>
-
-        <ul class="navbar-nav ml-auto d-block d-md-none">
-          <li class="nav-item">
-            <a class="btn btn-link" href="#"><i class="fas fa-shopping-cart"></i> <span class="badge badge-danger">3</span></a>
-          </li>
-        </ul>
-
-        <div class="collapse navbar-collapse">
-          <form class="form-inline my-2 my-lg-0 mx-auto">
-            <input class="form-control" type="search" placeholder="Search for products..." aria-label="Search">
-            <button class="btn btn-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
-          </form>
-
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="btn btn-dask" href="#"><i class='fas fa-box'></i> <span class="badge badge-danger">3</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="btn btn-dask" href="{% url 'cart' %}"><i class="fas fa-shopping-cart"></i> <span class="badge badge-danger">{{cartItems}}</span></a>
-            </li>
-            <li class="nav-item ml-md-3">
-              <a class="btn btn-outline-dark" href="#"><i class="fas fa-user-circle mr-1"></i> Log In / Register</a>
-            </li>
-          </ul>
-        </div>
-
-      </div>
-    </nav>
-
-    <nav class="navbar navbar-expand-md navbar-light bg-light sub-menu">
-      <div class="container">
-        <div class="collapse navbar-collapse" id="navbar">
-          <ul class="navbar-nav mx-auto">
-            <li class="nav-item" id="navhome">
-              <a class="nav-link"href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item" id="navhots">
-              <a class="nav-link" href="{% url 'store' %}">Hots</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Sneakers</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Apparel</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Support
-                            </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Delivery Information</a>
-                <a class="dropdown-item" href="#">Privacy Policy</a>
-                <a class="dropdown-item" href="#">Terms & Conditions</a>
+              </button>
+            </div>
+            <!-- navbar menu Start -->
+            <div class="navbar-menu">
+              <ul class="main-menu">
+                <div class="text-end">
+                  <button id="menu-close" class="d-block d-lg-none icon-btn primary-icon-border primary-btn-border ms-auto"><i class="mdi mdi-close"></i></button>
+                </div>
+                <li><a href="#0">Trang&nbsp;Chủ</a></li>
+                <li><a href="#0">Sneaker</a></li>
+                <li><a href="#0">Quần&nbsp;Áo</a></li>
+                <li><a href="#0">Phụ&nbsp;Kiện</a></li>
+                <li class="menu-item-has-children">
+                  <a href="#0" class="collapsed" data-bs-toggle="collapse" data-bs-target="#menuVertical7-5" aria-controls="menuVertical7-5" aria-expanded="false" aria-label="Toggle navigation">More <i class="mdi mdi-chevron-right"></i></a>
+                  <!-- sub menu Start -->
+                  <ul class="sub-menu collapse" id="menuVertical7-5">
+                    <li><a href="#0">Dropped Menu 1</a></li>
+                    <li class="menu-item-has-children">
+                      <a href="#0" class="collapsed" data-bs-toggle="collapse" data-bs-target="#menuVertical7-6" aria-controls="menuVertical7-6" aria-expanded="false" aria-label="Toggle navigation">Dropped Menu 2 <i class="mdi mdi-chevron-right"></i></a>
+                      <ul class="sub-menu collapse" id="menuVertical7-6">
+                        <li><a href="#0">Sub Dropped Menu 1</a></li>
+                        <li><a href="#0">Sub Dropped Menu 2</a></li>
+                        <li><a href="#0">Sub Dropped Menu 3</a></li>
+                        <li class="menu-item-has-children">
+                          <a href="#0" class="collapsed" data-bs-toggle="collapse" data-bs-target="#menuVertical7-7" aria-controls="menuVertical7-7" aria-expanded="false" aria-label="Toggle navigation">Sub Dropped Menu 4 <i class="mdi mdi-chevron-right"></i></a>
+                          <ul class="sub-menu collapse" id="menuVertical7-7">
+                            <li><a href="#0">Sub Dropped Menu 1</a></li>
+                            <li><a href="#0">Sub Dropped Menu 2</a></li>
+                            <li><a href="#0">Sub Dropped Menu 3</a></li>
+                            <li><a href="#0">Sub Dropped Menu 4</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li><a href="#0">Dropped Menu 3</a></li>
+                    <li><a href="#0">Dropped Menu 4</a></li>
+                  </ul>
+                  <!-- sub menu Ends -->
+                </li>
+              </ul>
+            </div>
+            <!-- navbar menu Ends -->
+            <div class="navbar-search-cart d-none d-lg-flex">
+              <!-- navbar search start -->
+              <div class="navbar-search search-style-5">
+                <div class="search-select">
+                  <div class="select-position">
+                    <select id="select26">
+                      <option value="" selected>All</option>
+                      <option value="1">option 01</option>
+                      <option value="2">option 02</option>
+                      <option value="3">option 03</option>
+                      <option value="4">option 04</option>
+                      <option value="5">option 05</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="search-input">
+                  <input type="text" placeholder="Search">
+                </div>
+                <div class="search-btn">
+                  <button><i class="lni lni-search-alt"></i></button>
+                </div>   
               </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+              <!-- navbar search Ends -->
+              <!-- navbar cart start -->
+              <div class="navbar-cart">
+                <a class="icon-btn primary-icon-text icon-text-btn" href="#0"><img src="{%static 'css/assets/images/icon-svg/cart-1.svg' %}" alt="Icon"><span class="icon-text text-style-1">88</span></a>       
 
-    <div class="search-bar d-block d-md-none">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <form class="form-inline mb-3 mx-auto">
-              <input class="form-control" type="search" placeholder="Search for products..." aria-label="Search">
-              <button class="btn btn-success" type="submit"><i class="fa fa-solid fa-magnifying-glass"></i></button>
-            </form>
-          </div>
+                <div class="navbar-cart-dropdown">
+                  <div class="checkout-style-2">
+                    <div class="checkout-header d-flex justify-content-between">
+                      <h6 class="title">Shopping Cart</h6>
+                    </div>
+
+                    <div class="checkout-table">
+                      <table class="table">
+                        <tbody>
+                          <tr>
+                            <td class="checkout-product">
+                              <div class="product-cart d-flex">
+                                <div class="product-thumb">
+                                  <img src="{%static 'css/assets/images/product-cart/product-1.png' %}" alt="Product">
+                                </div>
+                                <div class="product-content media-body">
+                                  <h5 class="title"><a href="#0">Hollow Port</a></h5>
+                                  <ul>
+                                    <li><span>Brown</span></li>
+                                    <li><span>XL</span></li>
+                                    <li><a class="delete" href="#0"><i class="mdi mdi-delete"></i></a></li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </td>
+                            <td class="checkout-quantity">
+                              <div class="product-quantity d-inline-flex">
+                                <button type="button" id="sub" class="sub"><i class="mdi mdi-minus"></i></button>
+                                <input type="text" value="1">
+                                <button type="button" id="add" class="add"><i class="mdi mdi-plus"></i></button>
+                              </div>
+                            </td>
+                            <td class="checkout-price">
+                              <p class="price">$36.00</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="checkout-product">
+                              <div class="product-cart d-flex">
+                                <div class="product-thumb">
+                                  <img src="{%static 'css/assets/images/product-cart/product-2.png' %}" alt="Product">
+                                </div>
+                                <div class="product-content media-body">
+                                  <h5 class="title"><a href="#0">Mist Black Triblend</a></h5>
+                                  <ul>
+                                    <li><span>Brown</span></li>
+                                    <li><span>XL</span></li>
+                                    <li><a class="delete" href="#0"><i class="mdi mdi-delete"></i></a></li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </td>
+                            <td class="checkout-quantity">
+                              <div class="product-quantity d-inline-flex">
+                                <button type="button" id="sub" class="sub"><i class="mdi mdi-minus"></i></button>
+                                <input type="text" value="1">
+                                <button type="button" id="add" class="add"><i class="mdi mdi-plus"></i></button>
+                              </div>
+                            </td>
+                            <td class="checkout-price">
+                              <p class="price">$36.00</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="checkout-product">
+                              <div class="product-cart d-flex">
+                                <div class="product-thumb">
+                                  <img src="{%static 'css/assets/images/product-cart/product-3.png' %}" alt="Product">
+                                </div>
+                                <div class="product-content media-body">
+                                  <h5 class="title"><a href="#0">Realm Bone</a></h5>
+                                  <ul>
+                                    <li><span>Brown</span></li>
+                                    <li><span>XL</span></li>
+                                    <li><a class="delete" href="#0"><i class="mdi mdi-delete"></i></a></li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </td>
+                            <td class="checkout-quantity">
+                              <div class="product-quantity d-inline-flex">
+                                <button type="button" id="sub" class="sub"><i class="mdi mdi-minus"></i></button>
+                                <input type="text" value="1">
+                                <button type="button" id="add" class="add"><i class="mdi mdi-plus"></i></button>
+                              </div>
+                            </td>
+                            <td class="checkout-price">
+                              <p class="price">$36.00</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="checkout-product">
+                              <div class="product-cart d-flex">
+                                <div class="product-thumb">
+                                  <img src="{%static 'css/assets/images/product-cart/product-4.png' %}" alt="Product">
+                                </div>
+                                <div class="product-content media-body">
+                                  <h5 class="title"><a href="#0">Circular Sienna</a></h5>
+                                  <ul>
+                                    <li><span>Brown</span></li>
+                                    <li><span>XL</span></li>
+                                    <li><a class="delete" href="#0"><i class="mdi mdi-delete"></i></a></li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </td>
+                            <td class="checkout-quantity">
+                              <div class="product-quantity d-inline-flex">
+                                <button type="button" id="sub" class="sub"><i class="mdi mdi-minus"></i></button>
+                                <input type="text" value="1">
+                                <button type="button" id="add" class="add"><i class="mdi mdi-plus"></i></button>
+                              </div>
+                            </td>
+                            <td class="checkout-price">
+                              <p class="price">$36.00</p>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <div class="checkout-footer">
+                      <div class="checkout-sub-total d-flex justify-content-between">
+                        <p class="value">Subotal Price:</p>
+                        <p class="price">$144</p>
+                      </div>
+                      <div class="checkout-btn">
+                        <a href="#0" class="main-btn primary-btn-border">View Cart</a>
+                        <a href="#0" class="main-btn primary-btn">Checkout</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>                             
+              </div>
+              <!-- navbar cart Ends -->
+            </div>                                
+          </nav>
         </div>
       </div>
+      <!-- main navbar Ends -->
     </div>
-  </div>
+    <div class="overlay-7"></div>
+  </header>
   
   <!-- Body -->
   <div class="container">
@@ -174,118 +333,142 @@
   </div>
 
   <!--Footer-->
-  <footer class="mt-5">
-    <div class="footer-wrap">
-    <div class="container first_class">
-        <div class="row">
-          <div class="col-md-4 col-sm-6">
-            <h3>BE THE FIRST TO KNOW</h3>
-            <p>Get all the latest information on  Triedge Services, Events, Jobs
-              and Fairs. Sign up for our newsletter today.</p>
-          </div>
-          <div class="col-md-4 col-sm-6">
-          <form class="newsletter">
-            <input type="text" placeholder="Email Address"> 
-                                                          <button class="newsletter_submit_btn" type="submit"><i class="fa fa-paper-plane"></i></button>	
-          </form>
-          
-          </div>
-          <div class="col-md-4 col-sm-6">
-            <div class="col-md-12">
-              <div class="standard_social_links">
-                <div>
-                  <li class="round-btn btn-facebook"><a href="#"><i class="fab fa-facebook-f"></i></a>
-
-                  </li>
-                  <li class="round-btn btn-instagram"><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-
-                  </li>
-                  <li class="round-btn btn-envelop"><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>
-
-                  </li>
-                </div>
-                
-              </div>	
-            </div>
-            <div class="clearfix"></div>
-            <div class="col-md-12"><h3 style="text-align: right;">Stay Connected</h3></div>
-          </div>
-        </div>
-    </div>
-      <div class="second_class">
-        <div class="container second_class_bdr">
-        <div class="row">
-          <div class="col-md-4 col-sm-6">
-
-            <div class="footer-logo"><img src="http://localhost/lrn/img/footer_logo.png" alt="logo">
-            </div>
-            <p>Your one-stop career platform to find Jobs, Internships, Professional Trainings, Projects, and Volunteering Opportunities.</p>
-          </div>
-          <div class="col-md-2 col-sm-6">
-            <h3>Quick  LInks</h3>
-            <ul class="footer-links">
-              <li><a href="#">Home</a>
-              </li>
-              <li><a href="#">About us</a>
-              </li>
-              <li><a href="#">Triedge Partners</a>
-              </li>
-              <li><a href="#">Contact Us</a>
-              </li>
-              <li><a href="#" target="_blank">Terms &amp; Conditions</a>
-              </li>
-              <li><a href="#" target="_blank">Privacy Policy</a>
-              </li>
-              <li><a href="#">Sitemap</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-3 col-sm-6">
-            <h3>OUR SERVICES</h3>
-            <ul class="footer-category">
-              <li><a href="#">Fresher Jobs</a>
-              </li>
-              <li><a href="#">InternEdge - Internships &amp; Projects </a>
-              </li>
-              <li><a href="#">Resume Edge - Resume Writing Services</a>
-              </li>
-              <li><a href="#">Readers Galleria - Curated Library</a>
-              </li>
-              <li><a href="#">Trideus - Campus Ambassadors</a>
-              </li>
-            </ul>
-            <div class="clearfix"></div>
-          </div>
-          <div class="col-md-3 col-sm-6">
-            <h3>triedge Events</h3>
-            <ul class="footer-links">
-              <li><a href="#">Triedge Events</a>
-              </li>
-
-              <li><a href="#">Jobs &AMP; Internship Fair 2019</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        
-      </div>
-      </div>
-      
+  <section class="footer-style-5 mt-50 pt-70 pb-100">
+    <div class="container">
       <div class="row">
-        
-        <div class="container-fluid">
-        <div class="copyright"> Copyright 2023 | All Rights Reserved by MakeItReal.LLC</div>
+        <div class="col-lg-3">
+          <div class="footer-about mt-30">
+            <a href="#0">
+              <img src="{% static 'css/assets/images/logo.svg' %}" alt="">
+            </a>
+            <p>
+              Made with © at <a href="#0">GrayGrids</a>. All rights
+              reserved.
+            </p>
+            <ul class="footer-social">
+              <li>
+                <a href="#0"><i class="lni lni-facebook-filled"></i></a>
+              </li>
+              <li>
+                <a href="#0"><i class="lni lni-twitter-filled"></i></a>
+              </li>
+              <li>
+                <a href="#0"><i class="lni lni-linkedin-original"></i></a>
+              </li>
+              <li>
+                <a href="#0"><i class="lni lni-instagram-original"></i></a>
+              </li>
+              <li>
+                <a href="#0"><i class="lni lni-whatsapp"></i></a>
+              </li>
+            </ul>
+          </div>
         </div>
-        
+        <div class="col-lg-6">
+          <div class="footer-link-widget">
+            <div class="footer-link">
+              <h5 class="footer-title">My Account</h5>
+
+              <ul class="link">
+                <li><a href="#0">Orders</a></li>
+                <li><a href="#0">Downloads</a></li>
+                <li><a href="#0">Addresses</a></li>
+                <li><a href="#0">Account details</a></li>
+                <li><a href="#0">Logout</a></li>
+              </ul>
+            </div>
+            <div class="footer-link">
+              <h5 class="footer-title">Information</h5>
+
+              <ul class="link">
+                <li><a href="#0">About Us</a></li>
+                <li><a href="#0">Contact Us</a></li>
+                <li><a href="#0">Downloads</a></li>
+                <li><a href="#0">Sitemap</a></li>
+                <li><a href="#0">FAQs Page</a></li>
+                <li><a href="#0">Comming Soon</a></li>
+                <li><a href="#0">404 Page</a></li>
+              </ul>
+            </div>
+            <div class="footer-link">
+              <h5 class="footer-title">Categories</h5>
+
+              <ul class="link">
+                <li><a href="#0">Outfit</a></li>
+                <li><a href="#0">Sunglassess</a></li>
+                <li><a href="#0">Watches</a></li>
+                <li><a href="#0">Bags</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="footer-widget-subscribe">
+            <h5 class="footer-title">Stay in the loop</h5>
+            <p>
+              Be the first to know when new products drop and get
+              behind-the-scenes content straight.
+            </p>
+
+            <div class="subscribe-form">
+              <form action="#">
+                <div class="single-form form-default">
+                  <label>Enter your email address</label>
+                  <div class="form-input">
+                    <input type="text" placeholder="user@email.com" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;">
+                    <i class="mdi mdi-account"></i>
+                    <button class="main-btn primary-btn">
+                      <span class="mdi mdi-send"></span>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-	
-	</footer>
+  </section>
 
-  <script src="https://kit.fontawesome.com/a8bc950322.js" crossorigin="anonymous"></script>
+  <!--====== Bootstrap js ======-->
+  <script type="text/javascript" src="{% static 'css/assets/js/bootstrap.bundle.min.js' %}"></script>
+
+  <!--====== Tiny Slider js ======-->
+  <script type="text/javascript" src="{% static 'css/assets/js/tiny-slider.js' %}"></script>
+
+  <!--====== nouiSlider js ======-->
+  <script type="text/javascript" src="{% static 'css/assets/js/nouislider.min.js' %}"></script>
+
+  <!--====== gLightBox js ======-->
+  <script type="text/javascript" src="{% static 'css/assets/js/glightbox.min.js' %}"></script>
+
+  <!--====== Main js ======-->
+  <script type="text/javascript" src="{% static 'css/assets/js/main.js' %}"></script>
+
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="{% static 'js/cart.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/cart.js' %}"></script>
+
+  <script>
+		// ========= main-menu 7  activation
+		let menuToggle7 = document.querySelector('.menu-style-7 .menu-toggle');
+		let mainMenu7 = document.querySelector('.menu-style-7 .main-menu');
+		let menuClose7 = document.querySelector('.menu-style-7 #menu-close');
+		let overlay7 = document.querySelector('.overlay-7');
+		menuToggle7.addEventListener('click', () => {
+			menuToggle7.classList.add('active');
+			mainMenu7.classList.add('open');
+			overlay7.classList.add('open');
+		})
+		menuClose7.addEventListener('click', () => {
+			mainMenu7.classList.remove('open');
+			overlay7.classList.remove('open');
+			menuToggle7.classList.remove('active');
+		})
+		overlay7.addEventListener('click', () => {
+			mainMenu7.classList.remove('open');
+			overlay7.classList.remove('open');
+			menuToggle7.classList.remove('active');
+		})
+  </script>
 </body>
 </html>

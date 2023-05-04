@@ -1,0 +1,24 @@
+
+/*=====   Alert & Message Page Style =====*/
+
+.single-alert{
+    padding-top: 35px;
+}
+
+.alert-list{
+    padding-top: 15px;
+    
+    & li{
+        & + li{
+            margin-top: 15px;
+        }
+    }
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,100 @@
+
+
+/*===== All Header Style 4 =====*/
+
+
+.header-style-4{
+    position: relative;
+
+    .tns-nav {
+        position: absolute;
+        bottom: 30px;
+        left: 0;
+        width: 100%;
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        button {
+            background: rgba($dark-color, 0.38);
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            font-size: 0;
+            border: 0;
+            @include transition(0.3s);
+            margin: 0 10px;
+    
+            &.tns-nav-active {
+                background-color: $secondary-2-color;
+                @include transform(scale(2));
+            }
+        }
+    }
+
+    & .header-4-active{
+        & .header-image{
+            height: 720px;
+
+            @media #{$xs}{
+                height: 620px;
+            }
+        }
+
+        & .slick-dots{
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            @include transform(translateX(-50%));
+            z-index: 9;
+
+            & li{    
+                display: inline-block;
+                margin: 0 10px;
+
+                & button{
+                    background: rgba($dark-color, 0.38);
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    font-size: 0;
+                    border: 0;
+                    @include transition(0.3s);
+                }
+
+                &.slick-active{
+                    & button{
+                        background-color: $secondary-2-color;
+                        @include transform(scale(2));
+                    }
+                }
+            }
+        }
+    }    
+
+    & .header-content{
+        max-width: 360px;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        @include transform(translateY(-50%));
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

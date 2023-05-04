@@ -1,0 +1,194 @@
+
+
+/*===== All Footer Style 2 =====*/
+
+
+.footer-style-1{
+    background-color: $white-variant;
+
+    & .footer-top{
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        -webkit-box-pack: space-between;
+        -ms-flex-pack: space-between;
+        justify-content: space-between;
+
+        @media #{$xs}{
+            display: block;
+        }
+        @media #{$sm}{
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+        }
+
+        & .footer-top-left{
+            
+        }
+        & .footer-top-right{
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+
+            & .title{
+                font-size: 16px;
+                line-height: 22px;
+                color: $dark-color;
+                font-weight: 400;
+                padding-right: 8px;
+            }
+            & .footer-follow{
+                & li{
+                    display: inline-block;
+                    margin-left: 8px;
+
+                    & a{
+                        font-size: 20px;
+                        color: $primary-color;
+
+                        @media #{$xs}{
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    & .footer-widget{
+        margin-top: 32px;
+
+        & .footer-title{
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 22px;
+            color: $dark-color;
+        }
+        & .footer-link{
+            padding-top: 12px;
+
+            & li{
+                padding: 4px 0;
+
+                & a{
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 22px;
+                    color: $dark-color;
+                    @include transition(0.3s);
+
+                    @media #{$md}{
+                        font-size: 14px;
+                    }
+
+                    &:hover{
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+    
+    & .footer-copyright{
+        padding-top: 52px;
+
+        & p{
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 22px;
+            color: $dark-color;
+            @include transition(0.3s);
+
+            & a{
+                color: $dark-color;
+                @include transition(0.3s);
+
+                &:hover{
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+}
+
+
+/*===== All Profile Style =====*/
+
+.footer-dark-style-1{
+    background-color: $dark-variant;
+
+    & .footer-top{
+        & .footer-top-left{
+            
+        }
+        & .footer-top-right{
+
+            & .title{
+                color: rgba($white-color, 0.6);
+            }
+            & .footer-follow{
+                & li{
+                    & a{
+                        color: $white-color;
+                    }
+                }
+            }
+        }
+    }
+
+    & .footer-widget{
+        & .footer-title{
+            color: rgba($white-color, 0.6);
+        }
+        & .footer-link{
+            & li{
+                & a{
+                    color: $white-color;
+
+                    &:hover{
+                        color: $secondary-1-color;
+                    }
+                }
+            }
+        }
+    }
+    
+    & .footer-copyright{
+
+        & p{
+            color: $white-color;
+
+            & a{
+                color: $white-color;
+
+                &:hover{
+                    color: $secondary-1-color;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

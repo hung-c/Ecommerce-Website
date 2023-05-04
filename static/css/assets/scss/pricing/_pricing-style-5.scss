@@ -1,0 +1,134 @@
+
+/*=====  Pricing  Style 5 =====*/
+
+.pricing-style-5{
+    padding: 30px;
+    background: $white-color;
+    @include box-shadow (2px 2px 8px rgba($dark-color, 0.32));
+    border-radius: 8px;
+    
+    & .pricing-header{
+        
+        & .pricing{
+            margin-left: -10px;
+            margin-right: -10px;
+            
+            & .title{
+                width: 65%;
+                padding: 0 10px;
+            }
+            
+            & .price{
+                font-size: 16px;
+                line-height: 22px;
+                color: $dark-light;
+                width: 35%;
+                padding: 0 10px;
+                text-align: right;
+                
+                & strong{
+                    font-weight: 500;
+                    font-size: 36px;
+                    line-height: 45px;
+                    color: $dark-color;
+                    display: block;
+                }
+            }
+        }
+         & .image{
+            padding: 0 100px;
+             margin-top: 30px;
+             
+             @media #{$lg}{
+                 padding: 0 60px;
+             }
+             @media #{$md}{
+                 padding: 0 90px;
+             }
+             @media #{$xs}{
+                 padding: 0 60px;
+             }
+             @media #{$sm}{
+                 padding: 0 80px;
+             }
+            
+             & img{
+                width: 100%;
+            }
+        }
+    }
+    & .pricing-body{
+        margin-top: 40px;
+        
+        & .pricing-list{
+            margin-top: 25px;
+            
+            & li{
+                font-size: 16px;
+                line-height: 22px;
+                color: $dark-light;
+                margin-top: 10px;
+                
+                & i{
+                    margin-right: 10px;
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+    & .pricing-footer{
+        margin-top: 30px;
+        
+        & .main-btn{
+            margin-top: 15px;
+        }
+    }
+}
+
+
+/*=====  Pricing  Style Dark 5 =====*/
+
+.pricing-style-dark-5{
+    background-color: $secondary-3-variant;
+    
+    & .pricing-header{        
+        & .pricing{
+            & .title{
+                color: $white-color;
+            }
+            
+            & .price{
+                color: rgba($white-color, 0.6);
+            
+                & strong{
+                    color: $white-color;
+                }
+            }
+        }
+    }
+    & .pricing-body{        
+        & .pricing-list{            
+            & li{
+                color: rgba($white-color, 0.6);
+                
+                & i{
+                    color: $secondary-1-color;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

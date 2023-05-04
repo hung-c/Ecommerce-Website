@@ -1,0 +1,88 @@
+
+
+/*===== All Product Style 19 =====*/
+
+
+
+.product-style-19{
+    background-color: $white-color;
+    @include box-shadow (2px 2px 8px rgba($dark-color, 0.32));
+
+    & .product-image{
+        position: relative;
+
+        & img{
+            width: 100%;
+            border-radius: 4px;
+        }
+    }
+
+    & .product-content{        
+        position: relative;
+        z-index: 5;
+        padding: 20px 20px 25px;
+
+        @media #{$lg}{
+            padding: 20px 15px 25px;
+        }
+        @media #{$md}{
+            padding: 20px 15px 25px;
+        }
+        @media #{$xs}{
+            padding: 20px 10px 25px;
+        }
+
+        & .title{
+            & a{
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 30px;
+                color: $dark-color;
+                @include transition(0.3s);
+                margin-top: 4px;
+
+                @media #{$lg}{
+                    font-size: 20px;
+                }
+                @media #{$md}{
+                    font-size: 20px;
+                }
+                @media #{$xs}{
+                    font-size: 18px;
+                }
+
+                &:hover{
+                    color: $primary-color;
+                }
+            }
+        }
+        & p{
+            color: $dark-variant;
+            font-size: 16px;
+            line-height: 22px;
+            font-weight: 400;
+            margin-top: 4px;
+        }
+        & .main-btn{
+            margin-top: 12px;
+            font-weight: 700;
+            letter-spacing: 0;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,63 @@
+
+
+/*=====  Contact  Style 1 =====*/
+
+
+.contact-style-1{
+    width: 100%;
+    padding: 55px 25px 60px;
+    border-radius: 10px;
+    @include box-shadow (2px 2px 8px rgba($dark-color, 0.32));
+
+    .select-position {
+        position: relative;
+      
+        &::after {
+            border-bottom: 2px solid #757575;
+            border-right: 2px solid #757575;
+            content: '';
+            display: block;
+            height: 8px;
+            margin-top: -4px;
+            pointer-events: none;
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            -webkit-transform-origin: 66% 66%;
+            -ms-transform-origin: 66% 66%;
+            transform-origin: 66% 66%;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+            -webkit-transition: all 0.15s ease-in-out;
+            transition: all 0.15s ease-in-out;
+            width: 8px;
+        }
+    }
+}
+
+
+.contact-dark-style-1{
+    background-color: $secondary-3-variant;
+    
+    & .title{
+        color: $white-color;
+    }
+    & p{
+        color: $white-color;
+    }
+    label {
+        color: $white-color;
+    }
+
+    .select-position {
+        position: relative;
+      
+        &::after {
+            border-bottom: 2px solid #d1d1d1;
+            border-right: 2px solid #d1d1d1;
+        }
+    }
+}
+
+

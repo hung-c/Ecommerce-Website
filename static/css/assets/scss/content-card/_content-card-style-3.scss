@@ -1,0 +1,215 @@
+
+
+/*===== All Content Card Style 3 =====*/
+
+.content-card-style-3{
+
+    & .content-title{
+        & .title{
+            font-weight: 500;
+            font-size: 52px;
+            line-height: 65px;
+            color: $dark-color;
+
+            @media #{$md}{
+                font-size: 42px;
+            }
+            @media #{$xs}{
+                font-size: 30px;
+                line-height: 40px;
+            }
+        }
+
+        & p{
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 30px;
+            color: rgba($dark-color, 0.64);
+            margin-top: 16px;
+
+            @media #{$md}{
+                font-size: 20px;
+                margin-top: 8px;
+            }
+            @media #{$xs}{
+                font-size: 18px;
+                margin-top: 8px;
+                line-height: 26px;
+            }
+        }
+    }
+       
+
+    & .single-content{
+        & .content-image{
+            & img{
+                @media #{$md}{
+                    width: 110px;
+                }
+                @media #{$xs}{
+                    width: 110px;
+                }
+            }
+        }
+        & .content-content{
+            & .title{
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 30px;
+                color: $dark-color;
+
+                @media #{$md}{
+                    font-size: 18px;
+                }
+                @media #{$xs}{
+                    font-size: 20px;
+                }
+            }
+            & p{
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 22px;
+                color: $dark-color;
+                margin-top: 16px;
+
+                @media #{$md}{
+                    margin-top: 8px;
+                }
+                @media #{$xs}{
+                    margin-top: 8px;
+                }
+            }
+        }
+    }   
+    
+    & .content-image{
+        position: relative;
+
+        & .content-image-preview{
+            position: relative;
+
+            .tns-controls {
+                position: absolute;
+                width: calc(100% - 50px);
+                height: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                left: 25px;
+
+                button {
+                    position: relative;
+                    z-index: 22;
+                    width: 40px;
+                    height:40px;
+                    border-radius: 4px;
+                    border: none;
+                    background: rgba($primary-color, .3);
+                    color: $primary-color;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 30px;
+            
+                    &:hover {
+                        background: $primary-color;
+                        color: $white-color;
+                    }
+                }
+            }
+
+            & .content-preview-active{
+                & .single-preview{
+                    & img{
+                        width: 100%;
+                    }
+                }
+
+                & .slick-arrow{
+                    position: absolute;
+                    top: 50%;
+                    @include transform(translateY(-50%));
+                    left: 30px;
+                    font-size: 32px;
+                    color: rgba($white-color, 0.36);
+                    @include transition(0.3s);
+                    z-index: 5;
+                    cursor: pointer;
+
+                    @media #{$xs}{
+                        left: 10px;
+                        font-size: 24px;
+                    }
+
+                    &.next{
+                        left: auto;
+                        right: 30px;
+
+                        @media #{$xs}{
+                            right: 10px;
+                        }
+                    }
+
+                    &:hover{
+                        color: $white-color;
+                    }
+                }
+            }
+        }
+        & .content-image-thumb{
+            width: 35%;
+            margin: 0 auto;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+
+            @media #{$md}{
+                width: 45%;
+            }
+            @media #{$xs}{
+                width: 80%;
+            }
+            @media #{$sm}{
+                width: 60%;
+            }
+            
+            & .content-thumb-active{
+                display: flex;
+
+                & .single-thumb{
+                    cursor: pointer;
+                    opacity: 0.4;
+                    @include transition(0.3s);
+
+                    & img{
+                        display: inline-block;
+                        width: 100%;
+                    }
+
+                    &.tns-nav-active {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

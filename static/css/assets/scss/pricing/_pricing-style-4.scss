@@ -1,0 +1,113 @@
+
+/*=====  Pricing  Style 4 =====*/
+
+.pricing-style-4{
+    padding: 30px;
+    background: $white-color;
+    @include box-shadow (2px 2px 8px rgba($dark-color, 0.32));
+    border-radius: 8px;
+    
+    & .pricing-header{
+        margin-left: -10px;
+        margin-right: -10px;
+       
+        & .pricing{
+            width: 65%;
+            padding: 0 10px;
+
+            & .title{}
+
+            & .price{
+                font-size: 16px;
+                line-height: 22px;
+                color: $dark-light;
+                margin-top: 10px;
+
+                & strong{
+                    font-weight: 500;
+                    font-size: 36px;
+                    line-height: 45px;
+                    color: $dark-color;
+                }
+            }
+        }
+         & .image{
+            width: 35%;
+            padding: 0 10px;
+            
+             & img{
+                width: 100%;
+            }
+        }
+    }
+    & .pricing-body{
+        margin-top: 40px;
+        
+        & .pricing-list{
+            margin-top: 25px;
+            
+            & li{
+                font-size: 16px;
+                line-height: 22px;
+                color: $dark-light;
+                margin-top: 10px;
+                
+                & i{
+                    margin-right: 10px;
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+    & .pricing-footer{
+        margin-top: 30px;
+        
+        & .main-btn{
+            margin-top: 15px;
+        }
+    }
+}
+
+/*=====  Pricing  Style Dark 4 =====*/
+
+
+.pricing-style-dark-4{
+    background-color: $secondary-3-variant;
+
+    & .pricing-header{       
+        & .pricing{
+            & .title{
+                color: $white-color;
+            }            
+            & .price{
+                color: rgba($white-color, 0.6);
+            
+                & strong{
+                    color: $white-color;
+                }
+            }
+        }
+    }
+    & .pricing-body{
+        & .pricing-list{            
+            & li{
+                color: rgba($white-color, 0.6);
+                
+                & i{
+                    color: $secondary-1-color;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+

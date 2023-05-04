@@ -1,0 +1,58 @@
+// call to action css
+
+.cta-style-2 {
+  position: relative;
+  z-index: 1;
+
+  .cta-style-2-img {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    left: 0;
+    top: 0;
+
+    @media #{$md} {
+      display: none;
+    }
+    @media #{$xs} {
+      display: none;
+    }
+  }
+
+  .cta-content {
+    padding: 100px 0;
+    text-align: center;
+
+    h1 {
+      @media #{$xs} {
+        font-size: 38px;
+      }
+    }
+
+    form {
+      position: relative;
+
+      input {
+        height: 55px;
+        border-radius: 50px;
+        padding-right: 140px;
+      }
+
+      .mdi {
+        top: 9px;
+      }
+
+      button {
+        position: absolute;
+        top: 7px;
+        right: 7px;
+        border-radius: 50px;
+      }
+    }
+
+
+  }
+}

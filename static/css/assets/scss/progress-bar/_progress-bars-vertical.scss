@@ -1,0 +1,141 @@
+
+
+/*=====  Progress Bar vertical =====*/
+
+.progress-bar-vertical{
+    
+}
+
+.single-progress-bar-vertical{
+    & + .single-progress-bar-vertical{
+        margin-left: 15px;
+    }
+
+    & .progress-bar-inner{
+        
+        & .bar-inner{
+            width: 40px;
+            height: 385px;
+            border-radius: 50px;
+            background-color: $gray-4;
+            position: relative;
+            overflow: hidden;
+            
+            & .progress-vertical{
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 0;
+                border-radius: 50px;
+                @include transition(1s);
+                width: 100%;
+                position: relative;
+                                
+                & i{
+                    font-size: 16px;
+                    line-height: 20px;
+                    color: $white-color;
+                    position: absolute;
+                    left: 50%;
+                    bottom: 5px;
+                    @include transform(translateX(-50%));
+                }
+            }
+        }
+    }
+    
+    &.shipped{
+        & .progress-text{            
+            & p{
+                color: $secondary-2-color;
+            }
+        }
+        & .progress-bar-inner{
+            & .bar-inner{    
+                & .progress-vertical{
+                    background-color: $secondary-2-color;
+                    height: 50%;
+                }
+            }
+        }
+    }
+    &.cancelled{
+        & .progress-text{            
+            & p{
+                color: $error-color;
+            }
+        }
+        & .progress-bar-inner{
+            & .bar-inner{    
+                & .progress-vertical{
+                    background-color: $error-color;
+                    height: 100%;
+                }
+            }
+        }
+    }
+    &.ready{
+        & .progress-text{            
+            & p{
+                color: $info-color;
+            }
+        }
+        & .progress-bar-inner{
+            & .bar-inner{    
+                & .progress-vertical{
+                    background-color: $info-color;
+                    height: 30%;
+                }
+            }
+        }
+    }
+    &.ordered{
+        & .progress-text{            
+            & p{
+                color: $secondary-1-color;
+            }
+        }
+        & .progress-bar-inner{
+            & .bar-inner{    
+                & .progress-vertical{
+                    background-color: $secondary-1-color;
+                    height: 15%;
+                }
+            }
+        }
+    }
+    &.delivered{
+        & .progress-text{            
+            & p{
+                color: $success-color;
+            }
+        }
+        & .progress-bar-inner{
+            & .bar-inner{    
+                & .progress-vertical{
+                    background-color: $success-color;
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+    &.dark-progress{
+        & .progress-bar-inner{
+            & .bar-inner{
+                background-color: rgba($white-color, 0.24);
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+

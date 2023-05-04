@@ -1,0 +1,107 @@
+
+
+/*===== All Order Progress Style =====*/
+
+
+.order-progress{
+    & .order-progress-steps{
+        position: relative;
+        padding-left: 70px;
+
+        & .single-progress-bar-vertical{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+
+            & .progress-bar-inner{
+                height: 100%;
+
+                & .bar-inner{
+                    height: 100%;
+                }
+            }
+
+            &.ready{
+                & .progress-bar-inner{    
+                    & .bar-inner{
+                        & .progress-vertical{
+                            height: 40%;
+                        }
+                    }
+                }
+            }
+
+            &.shipped{
+                & .progress-bar-inner{    
+                    & .bar-inner{
+                        & .progress-vertical{
+                            height: 68%;
+                        }
+                    }
+                }
+            }
+        }
+        & .progress-steps-wrapper{
+            & ul{
+                & li{
+                    & + li{
+                        margin-top: 32px;
+                    }
+
+                    & .progress-step{
+                        & .title{
+                            font-size: 16px;
+                            font-weight: 500;
+                            color: $dark-color;
+                            line-height: 22px;
+                        }
+                        & .date{
+                            font-size: 14px;
+                            line-height: 20px;
+                            font-weight: 400;
+                            color: $dark-variant;
+                            margin-top: 4px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    & .order-btn{
+        padding-left: 70px;
+
+        & .main-btn{
+            margin-top: 12px;
+        }
+    }    
+}
+
+
+/*===== All Order Progress Style =====*/
+
+.order-progress-dark{
+    background-color: $secondary-3-variant;
+
+    & .order-progress{
+        & .order-progress-steps{
+            & .progress-steps-wrapper{
+                & ul{
+                    & li{
+                        & .progress-step{
+                            & .title{
+                                color: $white-color;
+                            }
+                            & .date{
+                                color: rgba($white-color, 0.74);
+                            }
+                        }
+                    }
+                }
+            }
+        }  
+    }
+}
+
+
+

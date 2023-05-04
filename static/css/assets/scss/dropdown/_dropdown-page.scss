@@ -1,0 +1,31 @@
+
+
+/*=====  Dropdown Page  Style =====*/
+
+.dropdown-white-wrapper{
+    background-color: $primary-color;
+    padding: 10px;
+    padding-top: 1px;
+    margin-top: 30px;
+    
+    & .dropdown-list{
+        & .list-items{}
+    }
+}
+
+.dropdown-list{
+    & .list-items{
+        display: inline-block;
+        margin-top: 15px;
+        
+        & + .list-items{
+            margin-left: 20px;
+        }
+    }
+}
+
+
+
+
+
+

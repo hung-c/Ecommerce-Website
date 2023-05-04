@@ -1,0 +1,370 @@
+
+
+/*===== All Order ID Style =====*/
+
+.order-id-content{
+    position: relative;
+
+    & .order-id{
+        font-size: 24px;
+        line-height: 30px;
+        font-weight: 400;
+        color: $dark-color;
+    }
+    & .order-meta{
+        margin-top: 4px;
+
+        & li{
+            display: inline-block;
+
+            & + li{
+                margin-left: 15px;
+            }
+
+            & .product{
+                font-size: 14px;
+                color: $dark-variant;
+            }
+            & .date{
+                font-size: 15x;
+                color: $dark-variant;
+            }
+            & .track{
+                font-size: 14px;
+                color: $primary-color;
+                text-transform: uppercase;
+                font-weight: 500;
+            }
+        }
+    }
+    & .single-progress-bar-horizontal{
+        margin-top: 8px;
+    }
+    & .order-price{
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 30px;
+        color: $dark-color;
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        @media #{$xs}{
+            position: relative;
+            margin-top: 16px;
+        }
+        @media #{$sm}{
+            position: absolute;
+            margin-top: 0;
+        }
+    }
+}
+
+.order-title{
+    background-color: $white-light;
+    height: 48px;
+    padding: 0 16px;
+    border-radius: 8px;
+
+    & .title{
+        line-height: 48px;
+        color: $dark-color;
+    }
+}
+
+.order-product{
+    & .order-product-table{
+        & .table{
+            margin-bottom: 0;
+
+            & tbody{
+                & tr{
+                    & td{
+                        border-top: 0;
+                        border-bottom: 1px solid  $white-light;
+                        padding: 16px;
+
+                        &.product{
+                            min-width: 250px;
+                        }
+                        &.price{
+                            width: 100px;
+                        }
+                    }
+                }
+            }
+        }
+
+        & .order-product-item{
+            & .product-thumb{}
+            & .product-content{
+                padding-left: 8px;
+
+                & .title{
+                    & a{
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 22px;
+                        color: $dark-color;
+                        @include transition(0.3s);
+
+                        &:hover{
+                            color: $primary-color;
+                        }
+                    }
+                }
+                & ul{
+                    & li{
+                        display: inline-block;
+
+                        & + li{
+                            margin-left: 8px;
+                        }
+
+                        & span{
+                            font-size: 14px;
+                            line-height: 16px;
+                            color: $dark-variant;
+                        }
+                    }
+                }
+            }
+        }
+        & .product-price{
+            text-align: right;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 22px;
+            color: $dark-color;
+        }
+    }
+
+    & .order-product-total{
+        padding: 8px 16px;
+
+        & .sub-total{
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+            -webkit-box-pack: space-between;
+            -ms-flex-pack: space-between;
+            justify-content: space-between;            
+            
+            & .value{
+                line-height: 32px;
+                font-size: 14px;
+                color: $dark-color;
+                font-weight: 400;
+            }
+            & .price{
+                line-height: 32px;
+                font-size: 16px;
+                color: $dark-color;
+                font-weight: 400;
+            }
+        }
+    }
+    & .payable-total{
+        border-top: 1px solid $white-light;
+        padding: 8px 16px;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        -webkit-box-pack: space-between;
+        -ms-flex-pack: space-between;
+        justify-content: space-between;    
+        
+        & .value{
+            line-height: 32px;
+            font-size: 14px;
+            color: $dark-color;
+            font-weight: 500;
+        }
+        & .price{
+            line-height: 32px;
+            font-size: 16px;
+            color: $dark-color;
+            font-weight: 500;
+        }
+    }
+}
+
+.single-order-details{
+    & .order-details-content{
+        & .single-details-item{
+            padding: 8px 16px 0;
+
+            & .details-title{
+                width: 40%;
+                margin-top: 8px;
+
+                & .title{
+                    font-size: 14px;
+                    line-height: 22px;
+                    font-weight: 400;
+                    color: $dark-variant;
+                }
+            }
+            & .details-content{
+                width: 60%;
+                margin-top: 8px;
+
+                & p{
+                    font-size: 16px;
+                    line-height: 22px;
+                    color: $dark-color;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
+
+.order-policy{
+    & .policy-content{
+        padding: 16px 16px 0;
+
+        & p{
+            font-size: 14px;
+            font-weight: 400;
+            color: $dark-variant;
+            line-height: 22px;
+        }
+    }
+}
+
+.order-btn{
+    & .main-btn{
+        margin-top: 12px;
+    }
+}
+
+
+/*===== All Order ID Style =====*/
+
+.order-id-dark{
+    background-color: $secondary-3-variant;
+
+    & .order-id-content{    
+        & .order-id{
+            color: $white-color;
+        }
+        & .order-meta{    
+            & li{    
+                & .product{
+                    color: rgba($white-color, 0.74);
+                }
+                & .date{
+                    color: rgba($white-color, 0.74);
+                }
+                & .track{
+                    color: $secondary-1-color;
+                }
+            }
+        }
+        & .order-price{
+            color: $white-color;
+        }
+    }
+
+    & .order-title{
+        background-color:rgba($dark-color, 0.16);  
+
+        & .title{
+            color: $white-color;
+        }
+    }
+
+    & .order-product{
+        & .order-product-table{
+            & .table{    
+                & tbody{
+                    & tr{
+                        & td{
+                            border-bottom: 1px solid  rgba($white-color, 0.16);
+                        }
+                    }
+                }
+            }
+    
+            & .order-product-item{
+                & .product-thumb{}
+                & .product-content{    
+                    & .title{
+                        & a{
+                            color: $white-color;
+
+                            &:hover{
+                                color: $secondary-1-color;
+                            }
+                        }
+                    }
+                    & ul{
+                        & li{    
+                            & span{
+                                color: rgba($white-color, 0.74);
+                            }
+                        }
+                    }
+                }
+            }
+            & .product-price{
+                color: $white-color;
+            }
+        }
+    
+        & .order-product-total{    
+            & .sub-total{
+                & .value{
+                    color: $white-color;
+                }
+                & .price{
+                    color: $white-color;
+                }
+            }
+        }
+        & .payable-total{
+            border-top: 1px solid rgba($white-color, 0.16);   
+            
+            & .value{
+                color: $white-color;
+            }
+            & .price{
+                color: $white-color;
+            }
+        }
+    }
+    
+    & .single-order-details{
+        & .order-details-content{
+            & .single-details-item{
+                & .details-title{
+                    & .title{
+                        color: rgba($white-color, 0.74);
+                    }
+                }
+                & .details-content{
+                    & p{
+                        color: $white-color;
+                    }
+                }
+            }
+        }
+    }
+
+    & .order-policy{
+        & .policy-content{    
+            & p{
+                color: rgba($white-color, 0.74);
+            }
+        }
+    }
+    
+}
+
+
+

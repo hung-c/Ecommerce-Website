@@ -1,0 +1,702 @@
+/* ==================================
+    MENU STYLE 2 CSS
+===================================== */ 
+
+.menu-style-2 {
+  @include box-shadow (2px 4px 8px rgba($dark-color, 0.08));
+  background-color: $white-color;
+
+  @media #{$md, $xs} {
+    padding-top: 8px;
+  }
+
+
+  & .menu-top-area {
+    border-bottom: 2px solid $gray-4;
+    padding: 3px 0;
+    display: flex;
+    justify-content: space-between;
+
+    @media #{$md, $xs} {
+      justify-content: flex-end;
+      border-color: transparent;
+      border-top: 2px solid $gray-4;
+      margin-top: 8px;
+    }
+
+    .menu-top-left {
+      @media #{$md, $xs} {
+        display: none;
+      }
+    }
+
+    & .menu-top-link {
+      display: flex;
+      align-items: center;
+
+      & li {
+
+        & a {
+          padding: 0 16px;
+          line-height: 36px;
+          color: $dark-variant;
+          font-size: 14px;
+          text-transform: uppercase;
+          font-weight: 500;
+          @include transition(0.3s);
+          display: flex;
+          align-items: center;
+          
+          @media #{$lg}{
+            padding: 0 12px;
+            font-size: 14px;
+          }
+          
+          @media #{$md, $xs}{
+            font-size: 14px;
+            padding: 5px;
+            line-height: 22px;
+          }
+
+          & i {
+            margin-right: 4px;
+            font-size: 18px;
+          }
+
+          &:hover {
+            color: $primary-color;
+          }
+        }
+
+        .select-position {
+
+          &::after {
+            right: 5px;
+          }
+        }
+
+        select {
+          border: none;
+          padding-right: 30px;
+          
+          @media #{$xs} {
+            display: none;
+          }
+
+          @media #{$sm} {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  & .main-navbar {
+    padding: 15px 0;
+
+    @media #{$md, $xs}{
+      padding: 0;
+    }
+
+    & .navbar-menu {
+      position: relative;
+
+      & .navbar-menu-toggle{
+        padding-right: 16px;
+          
+        & .menu-toggle{
+          padding: 5px;
+          border: 0;
+          background: none;
+          @include transition(0.3s);
+          border-radius: 4px;
+
+          @media #{$md, $xs} {
+            position: absolute;
+            top: -40px;
+          }
+
+          & .toggle-icon{
+            width: 25px;
+            height: 2px;
+            background-color: $dark-color;
+            display: block;
+            margin: 5px 0;
+            position: relative;
+            @include transition(0.3s);
+          }
+
+          &.active{
+            background-color: $primary-color;
+
+            & .toggle-icon{
+              background-color: $white-color;
+
+              &:nth-child(1){
+                top: 7px;
+                @include transform(rotate(45deg));
+              }
+              &:nth-child(2){
+                opacity: 0;
+              }
+              &:nth-child(3){
+                top: -7px;
+                @include transform(rotate(135deg));
+              }
+            }
+          }
+        }
+      }
+      
+      & .main-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 99;
+        background-color: $white-color;
+        width: 320px;
+        padding: 24px;
+        @include box-shadow (2px 2px 8px rgba($dark-color, 0.25));
+        margin-top: 16px;
+
+        @media #{$lg}{
+          width: 260px;
+          padding: 16px;
+        }
+        @media #{$md, $xs}{
+          width: 100%;
+          margin-top: 0;
+          left: 0;
+          @include transform(translateX(0));
+        }
+
+        & li {
+          position: static;
+
+          @media #{$md, $xs}{
+            position: relative;
+          }
+            
+          &.menu-item-has-children {
+
+            a {
+              &.collapsed {
+                i {
+                  @media #{$md, $xs} {
+                    @include transform(rotate(90deg));
+                  }
+                }
+              }
+              i {
+                @media #{$md, $xs} {
+                  display: block;
+                  @include transform(rotate(270deg));
+                  @include transition(.3s);
+                }
+              }
+            }
+          }
+          & a {
+            padding: 0 16px;
+            line-height: 40px;
+            color: $dark-variant;
+            font-size: 16px;
+            text-transform: uppercase;
+            font-weight: 500;
+            @include transition(0.3s);
+            border-radius: 4px;
+            display: block;
+            position: relative;
+            
+            @media #{$lg}{
+              padding: 0 12px;
+              font-size: 14px;
+            }
+              
+            @media #{$md, $xs}{
+              display: block;
+              padding: 0;
+              border-bottom: 1px solid $gray-3;
+              line-height: 36px;
+              text-transform: capitalize;
+              font-size: 16px;
+              font-weight: 400;
+              border-radius: 0;
+            }
+
+            & i{
+              width: 40px;
+              height: 40px;
+              line-height: 40px;
+              position: absolute;
+              top: 0;
+              right: 0;
+              font-size: 24px;
+              text-align: center;
+
+              @media #{$md, $xs}{
+                display: none;
+              }
+            }
+          }
+          
+          & .menu-expand{
+            position: absolute;
+            width: 21px;
+            height: 21px;
+            top: 8px;
+            right: 0;
+            cursor: pointer;
+            z-index: 9;
+              
+            &::before{
+              position: absolute;
+              content: '';
+              top: 50%;
+              @include transform(translateY(-50%));
+              left: 0;
+              width: 100%;
+              height: 2px;
+              background-color: $dark-color;
+            }
+            &::after{
+              position: absolute;
+              content: '';
+              top: 0;
+              left: 50%;
+              @include transform(translateX(-50%));
+              width: 2px;
+              height: 100%;
+              background-color: $dark-color;
+              @include transition(0.3s);
+            }
+          }
+          
+          &.active{
+            & > .menu-expand{
+              &::after{
+                height: 0;
+              }
+            }
+          }
+
+          &:hover {
+            & > a {
+              background-color: $primary-color;
+              color: $white-color;
+              @include box-shadow (2px 2px 8px rgba($dark-color, 0.32));
+              
+              @media #{$md, $xs}{
+                background-color: $white-color;
+                color: $primary-color;
+                @include box-shadow (none);
+              }
+            }
+          }
+          
+          & .sub-mega-dropdown{
+            position: absolute;
+            top: 20px;
+            left: 100%;
+            z-index: 999;
+            min-width: 735px;
+            width: 100%;
+            @include box-shadow (2px 2px 8px rgba($dark-color, 0.32));
+            border: 0;
+            padding: 0;
+            margin-top: 0;
+            background-color: $white-color;
+            @include transition(0.3s);
+            padding: 40px 24px;
+            opacity: 0;
+            visibility: hidden;
+
+            &.collapse:not(.show) {
+              display: block;
+
+              @media #{$md, $xs} {
+                display: none;
+              }
+            }
+            
+            @media #{$lg}{
+              min-width: 613px;
+            }
+            @media #{$md, $xs}{
+              position: relative;
+              top: 0;
+              left: 0;
+              width: 100%;
+              opacity: 1;
+              visibility: visible;
+              @include box-shadow (none);
+              padding: 0;
+              padding-left: 15px;
+              min-width: inherit;
+            }
+              
+            & .mega-dropdown{
+              padding: 0 !important;
+                
+              & .mega-dropdown-list{
+                width: 33.33%;
+
+                @media #{$md, $xs}{
+                  width: 100%;
+                }
+
+                & .mega-title{
+                  @media #{$md, $xs}{
+                    line-height: 36px;
+                    border-bottom: 1px solid $gray-3;
+                    cursor: pointer;
+                    display: flex;
+                    justify-content: space-between;
+                  }
+
+                  &.collapsed {
+
+                    i {
+                      @include transform(rotate(0deg));
+                    }
+                  }
+
+                  i {
+                    display: none;
+                    @include transition(.3s);
+                    font-size: 24px;
+
+                    @media #{$md, $xs} {
+                      display: inline;
+                      @include transform(rotate(180deg));
+                    }
+                  }
+                }
+                & ul{
+
+                  &.collapse:not(.show) {
+                    display: block;
+      
+                    @media #{$md, $xs} {
+                      display: none;
+                    }
+                  }
+
+                  @media #{$md, $xs}{
+                    padding-left: 15px;
+                  }
+                    
+                  & li{
+                    padding: 0;
+                    margin-top: 16px;
+
+                    @media #{$lg} {
+                      margin-top: 8px;
+                    }
+                    @media #{$md, $xs} {
+                      margin-top: 0;
+                    }
+
+                    & a{
+                      font-size: 16px;
+                      line-height: 22px;
+                      padding: 0;
+                      text-transform: capitalize;
+                      font-weight: 400;
+
+                      @media #{$lg} {
+                        font-size: 14px;
+                      }
+                      @media #{$md, $xs} {
+                        padding: 0;
+                        line-height: 36px;
+                        font-size: 14px;
+                      }
+                    }
+
+                    &:hover{
+                      & > a{
+                        background-color: transparent;
+                        color: $primary-color;
+                        @include box-shadow (none);
+                        padding-left: 5px;
+                      }
+                    }
+                  }
+                }
+
+                & .menu-image{
+                  margin-top: 8px;
+                  margin-right: 8px;
+
+                  & img{
+                    width: 100%;
+                    border-radius: 4px;
+                  }
+                }
+              }
+            }
+          }
+          
+          &:hover{
+            & .sub-mega-dropdown{
+              top: 0;
+              opacity: 1;
+              visibility: visible;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  & .navbar-search-cart{
+    width: 100%;
+  }
+
+  & .navbar-search {
+    width: 100%;
+  }
+
+  & .navbar-cart {
+    padding-left: 15px;
+    position: relative;
+
+    @media #{$md}{
+      float: right;
+      display: block;
+    }
+
+    & .icon-btn {
+      border-radius: 4px;
+
+      &::before{
+        display: none;
+      }
+    }
+
+    & .navbar-cart-dropdown{
+      width: 350px;
+      position: absolute;
+      top: 100%;
+      right: 0;            
+      z-index: 99;
+      background-color: $white-color;
+      opacity: 0;
+      visibility: hidden;
+      @include transition(0.3s);
+      border-radius: 8px;
+      margin-top: 15px;
+
+      @media #{$xs}{
+        width: 280px;
+      }
+      @media #{$sm}{
+        width: 350px;
+      }
+    }
+
+    &:hover{
+      & .navbar-cart-dropdown{
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+
+
+
+/*=====  Navbar Dark 2 =====*/
+
+.menu-dark-2{
+  @include box-shadow (0px 2px 4px rgba($dark-color, 0.08));
+  background-color: $secondary-3-color;
+
+
+      
+  & .menu-top-area {
+      border-bottom: 1px solid rgba($gray-3, 0.2);
+
+      @media #{$md, $xs} {
+        border-bottom-color: transparent;
+      }
+
+      & .menu-top-left {
+          & .menu-top-link {                        
+              & li {
+
+                select {
+                  color: $white-color;
+
+                  option {
+                    color: $dark-color;
+                  }
+                }
+                  & a {
+                      color: $white-color;
+
+                      &:hover {
+                          color: $secondary-1-color;
+                      }
+                  }
+              }
+          }
+      }
+
+      & .menu-top-right {
+          & .menu-top-link {
+              & li {
+                select {
+                  color: $white-color;
+
+                  option {
+                    color: $dark-color;
+                  }
+                }
+
+                  & a {
+                      color: $white-color;
+
+                      &:hover {
+                          color: $secondary-1-color;
+                      }
+                  }
+              }
+          }
+      }
+  }
+
+  & .main-navbar {
+      & .navbar-menu {
+          & .navbar-menu-toggle{                    
+              & .menu-toggle{
+                  & .toggle-icon{
+                      background-color: $white-color;
+                  }
+
+                  &.active{
+                      background-color: $secondary-1-color;
+                  }
+              }
+          }
+
+          & .main-menu {
+              background-color: $secondary-3-variant;
+
+              & li {                        
+                  & a {
+                      color: $white-color;
+                      
+                      @media #{$md}{
+                          border-bottom: 1px solid rgba($gray-3, 0.2);
+                      }
+                      @media #{$xs}{
+                          border-bottom: 1px solid rgba($gray-3, 0.2);
+                      }
+                  }
+                  
+                  & .menu-expand{
+                      
+                      &::before{
+                          background-color: $white-color;
+                      }
+                      &::after{
+                          background-color: $white-color;
+                      }
+                  }
+                  
+                  &.active{
+                      & > .menu-expand{
+                          &::after{
+                              height: 0;
+                          }
+                      }
+                  }
+
+                  &:hover {
+                      & > a {
+                          background-color: $secondary-1-color;
+                          
+                          @media #{$md}{
+                              background-color: transparent;
+                              color: $dark-variant;
+                          }
+                          @media #{$xs}{
+                              background-color: transparent;
+                              color: $dark-variant;
+                          }
+                      }
+                  }
+                  
+                  & .sub-mega-dropdown{
+                      background-color: $secondary-3-variant;
+                                                  
+                      & .mega-dropdown{
+                          
+                          & .mega-dropdown-list{
+          
+                              & .mega-title{
+                                  color: $white-color;
+
+                                  @media #{$md}{
+                                      border-bottom: 1px solid rgba($gray-3, 0.2);
+                                  }
+                                  @media #{$xs}{
+                                      border-bottom: 1px solid rgba($gray-3, 0.2);
+                                  }
+                              }
+                              & ul{                                        
+                                  & li{
+
+                                      &:hover{
+                                          & > a{
+                                              color: $secondary-1-color;
+                                          }
+                                      }
+                                  }
+                              }
+                          }
+                      }
+                  }
+              }
+          }
+      }
+  }
+
+  & .navbar-toggle,
+  & .navbar-cart {
+      & .icon-btn {
+          color: $white-color;
+      }
+  }
+
+  select {
+    color: $white-color;
+
+    option {
+      color: $dark-color;
+    }
+  }
+
+}
+
+.overlay-dark-2{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: rgba($dark-color, 0.7);
+  z-index: 99;
+  @include transition(0.3s);
+  @include transition-delay(0.3s);
+  
+  &.open{
+      width: 100%;
+      @include transition-delay(0s);
+  }
+}
+

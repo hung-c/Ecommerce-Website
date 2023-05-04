@@ -1,0 +1,94 @@
+
+
+/*===== All Product Style 12 =====*/
+
+
+
+.product-style-14{
+    background-color: $secondary-3-variant;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    padding: 16px;
+
+    @media #{$xs}{
+        padding: 8px;
+    }
+    @media #{$sm}{
+        padding: 16px;
+    }
+
+    & .product-image{
+        width: 88px;
+
+        & img{
+            width: 100%;
+            border-radius: 4px;
+        }
+    }
+
+    & .product-content{
+        -webkit-flex: 1;
+        -moz-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        padding-left: 16px;
+
+        & .title{
+            & a{
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 28px;
+                color: $white-color;
+                @include transition(0.3s);
+                margin-top: 4px;
+
+                @media #{$lg}{
+                    font-size: 18px;
+                }
+                @media #{$md}{
+                    font-size: 18px;
+                }
+                @media #{$xs}{
+                    font-size: 18px;
+                }
+
+                &:hover{
+                    color: $secondary-1-color;
+                }
+            }
+        }
+        & p{
+            color: rgba($white-color, 0.74);
+            font-size: 16px;
+            line-height: 22px;
+            font-weight: 400;
+            margin-top: 8px;
+        }
+        & .main-btn{
+            margin-top: 12px;
+            font-weight: 700;
+            letter-spacing: 0;
+            text-transform: capitalize;
+            margin-top: 16px;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

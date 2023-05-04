@@ -1,0 +1,52 @@
+
+
+/*===== All Header Style 2 =====*/
+
+
+.header-style-2{
+    
+    & .header-product{
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        -moz-flex-wrap: wrap;
+        flex-wrap: wrap;
+
+        & .product-style-25{
+            width: 33.33%;
+
+            @media #{$xs}{
+                width: 100%;
+            }
+
+            & .product-content{        
+                @media #{$lg}{
+                    width: 70%;
+                }               
+                @media #{$sm}{
+                    width: 70%;
+                }        
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

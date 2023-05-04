@@ -1,23 +1,28 @@
 {% extends 'store/main.html' %}
 {% load static %}
 {% block content %}
-    <div class="row">
-        {% for product in products %}
-        <div class="col-lg-4">
-              <img class="thumbnail" src="{{product.imageURL}}">
-            <div class="box-element product">
-                <h6><strong>{{product.name}}</strong></h6>
-                <hr>
-
-                <button class="btn btn-outline-secondary btn-sm add-btn update-cart" data-product="{{product.id}}" data-action="add">Add to Cart</button>
-		        <a class="btn btn-sm btn-outline-success" href="#">View</a>
-		        <h5 style="display: inline-block; float: right;"><strong>${{product.price|floatformat:2}}</strong></h5>
-            
+    <section class="product-wrapper pt-70">
+        <div class="container">
+          <div class="row">
+            {% for product in products %}
+            <div class="col-lg-4 col-md-6">
+              <div class="product-style-23 mt-30">
+                <div class="product-image">
+                  <img src="{{product.imageURL}}" alt="product">
+                </div>
+                <div class="product-content text-center">
+                  <h4 class="title"><a href="#0">{{product.name}}</a></h4>
+                  <p>
+                    A replacement for the Oculus Go controller. Only one
+                    controller can be synced.
+                  </p>
+                  <a href="#0" class="main-btn primary-btn update-cart" data-product="{{product.id}}" data-action="add">
+                    <img src="{%static 'css/assets/images/icon-svg/cart-4.svg' %}" alt="">${{product.price|floatformat:2}}</a>
+                </div>
+              </div>
             </div>
+            {% endfor %}
         </div>
-        {% endfor %}
-
-        </div>
-    </div>
+      </section>
 
 {% endblock content %}

@@ -1,0 +1,15 @@
+// call to action css
+
+.cta-style-3 {
+
+  .cta-content {
+
+    h3 {
+      font-size: 36px;
+
+      @media #{$xs} {
+        font-size: 30px;
+      }
+    }
+  }
+}

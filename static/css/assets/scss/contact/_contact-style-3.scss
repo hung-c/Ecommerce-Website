@@ -1,0 +1,54 @@
+
+
+/*=====  Contact Style 2 =====*/
+
+.contact-style-3{
+    width: 100%;
+    padding: 105px 95px 110px;
+    border-radius: 10px;
+    @include box-shadow (2px 2px 8px rgba($dark-color, 0.32));
+    
+    @media #{$md}{
+        padding: 75px 60px 80px;
+    }
+    @media #{$xs}{
+        padding: 25px 25px 30px;
+    }
+    @media #{$sm}{
+        padding: 45px 40px 50px;
+    }
+}
+
+
+/*=====  Contact Dark Style 2 =====*/
+
+.contact-dark-style-3{
+    background-color: $secondary-3-variant;
+    
+    & .title{
+        color: $white-color;
+    }
+    .sub-title{
+        color: $white-color;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

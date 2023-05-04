@@ -1,0 +1,61 @@
+// call to action css
+
+
+.cta-style-5 {
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .cta-wrapper {
+    background: $white-color;
+    border-radius: 15px;
+    padding: 90px 50px;
+    @include box-shadow(0 10px 35px rgba(0, 0, 0, .2));
+
+    @media #{$xs} {
+      padding: 90px 30px;
+    }
+
+    h2 {
+      font-weight: 500;
+
+      @media #{$lg} {
+        font-size: 28px;
+      }
+      @media #{$xs} {
+        font-size: 28px;
+      }
+
+      strong {
+        font-weight: 700;
+        display: block;
+
+        @media #{$lg} {
+          font-size: 30px;
+        }
+        @media #{$xs} {
+          font-size: 30px;
+        }
+      }
+    }
+
+    form {
+
+      input {
+        height: 50px;
+        padding-right: 140px;
+      }
+
+      .mdi {
+        top: 6px;
+      }
+
+      button {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 50px;
+      }
+    }
+  }
+}

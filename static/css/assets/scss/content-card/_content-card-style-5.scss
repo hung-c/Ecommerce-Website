@@ -1,0 +1,120 @@
+
+
+/*===== All Content Card Style 5 =====*/
+
+.content-card-style-5{ 
+    background-color: #EEEEEE;
+    position: relative;
+
+    @media #{$xs}{
+        padding-top: 50px;
+        padding-bottom: 80px;
+    }
+
+    & .content-card-image{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: end;
+
+        @media #{$xs}{
+            position: relative;
+            width: 100%;
+            padding-top: 50px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+
+    & .content-card-content-wrapper{
+        max-width: 410px;
+        padding-top: 130px;
+        padding-bottom: 160px;
+        margin-left: auto;
+
+        @media #{$lg}{
+            padding-top: 70px;
+            padding-bottom: 100px;
+        }
+        @media #{$md}{
+            padding-top: 50px;
+            padding-bottom: 80px;
+        }
+        @media #{$xs}{
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        & .single-content-card{
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+            margin-top: 32px;
+
+            & .content-card-icon{
+                & i{
+                    font-size: 72px;
+                    line-height: 72px;
+                    color: $secondary-1-color;
+                }
+            }
+            & .content-card-content{
+                padding-left: 30px;
+                -webkit-flex: 1;
+                -moz-flex: 1;
+                -ms-flex: 1;
+                flex: 1;
+
+                & .title{
+                    font-weight: 500;
+                    font-size: 24px;
+                    line-height: 30px;
+                    color: $dark-color;
+
+                    @media #{$xs}{
+                        font-size: 20px;
+                    }
+                }
+                & p{
+                    font-weight: 300;
+                    font-size: 16px;
+                    line-height: 22px;
+                    color: $dark-color;
+                    margin-top: 16px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,141 @@
+
+
+/*==========  Color Page Style =========*/
+
+.colors-wrapper {}
+
+.color-plat {}
+
+.color-plat-wrapper {
+    border-radius: 10%;
+    
+    & .color-plat-1 {
+        margin-top: 25px;
+        
+        & .color-plat-box {
+            width: 56px;
+            height: 56px;
+            border-radius: 10px;
+            
+            @media #{$xs}{
+                width: 32px;
+                height: 32px;
+                border-radius: 4px;
+            }
+            @media #{$sm}{
+                width: 56px;
+                height: 56px;
+                border-radius: 10px;
+            }
+        }
+
+        & .color-plat-name {
+            padding-left: 20px;
+            
+            @media #{$xs}{
+                padding-left: 10px;
+            }
+        }
+    }
+}
+
+.color-plat-text{
+    padding: 5px 30px 15px;
+    border-radius: 10px;
+    margin-top: 30px;
+    
+    & p{
+        font-weight: 700;
+        padding-top: 10px;
+    }
+    
+    & .white-100{
+        color: $white-color;
+    }
+    & .white-74{
+        color: rgba($white-color, 0.74);
+    }
+    & .white-60{
+        color: rgba($white-color, 0.6);
+    }
+    & .white-30{
+        color: rgba($white-color, 0.3);
+    }
+    
+    & .black-100{
+        color: $dark-color;
+    }
+    & .black-74{
+        color: rgba($dark-color, 0.74);
+    }
+    & .black-60{
+        color: rgba($dark-color, 0.6);
+    }
+    & .black-30{
+        color: rgba($dark-color, 0.3);
+    }
+}
+
+.white-plate{
+    background-color: $primary-color;
+    padding: 5px;
+}
+
+
+.gradients-wrapper{
+    margin-left: -15px;
+    margin-right: -15px;
+    
+    & .gradients-col{
+        width: 14.28%;
+        padding-left: 15px;
+        padding-right: 15px;
+        
+        @media #{$md}{
+            width: 20%;
+        }
+        @media #{$xs}{
+            width: 50%;
+        }
+        @media #{$sm}{
+            width: 33.33%;
+        }
+    }
+}
+
+
+.single-gradient{
+    border-radius: 8px;
+    @include box-shadow (2px 4px 8px rgba($dark-color, 0.25));
+    
+    & .gradients-box{
+        width: 100%;
+        height: 76px;
+        border-radius: 8px;
+    }
+    & .gradients-name{
+        padding: 15px 20px;
+        
+        & .color-hex{
+            width: 100%;
+            height: 8px;
+            border-radius: 5px;
+            position: relative;
+            margin-top: 10px;
+            
+            & span{
+                width: 50%;
+                right: 0;
+                top: 0;
+                height: 100%;
+                position: absolute;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+
+
+
+
+

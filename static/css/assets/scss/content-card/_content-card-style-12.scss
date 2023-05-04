@@ -1,0 +1,86 @@
+
+
+/*===== All Content Card Style 12 =====*/
+
+.content-card-style-12{ 
+    position: relative; 
+    height: 670px;
+
+    @media #{$xs}{
+        height: 580px;
+    }
+    @media #{$sm}{
+        height: 640px;
+    }
+
+    & .content-card{
+        position: absolute;
+        max-width: 480px;
+        padding: 40px;
+        background-color: rgba($dark-color, 0.6);
+        top: 50%;
+        left: 0;
+        @include transform(translateY(-50%));
+        width: 100%;
+
+        @media #{$xs}{
+            width: 80%;
+            padding: 20px;
+        }
+        @media #{$sm}{
+            max-width: 420px;
+            padding: 30px;
+        }
+
+        
+        & .title{
+            font-weight: 300;
+            font-size: 44px;
+            line-height: 55px;
+            color: $white-color;
+            text-transform: uppercase;
+
+            @media #{$xs}{
+                font-size: 24px;
+                line-height: 35px;
+            }
+            @media #{$sm}{
+                font-size: 28px;
+                line-height: 42px;
+            }
+        }
+        & .content-link{
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 24px;
+            color: $secondary-2-color;
+            text-transform: uppercase;
+            margin-top: 26px;
+
+            @media #{$xs}{
+                font-size: 14px;
+            }
+            @media #{$sm}{
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

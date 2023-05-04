@@ -1,0 +1,67 @@
+// features css
+
+.feature-wrapper {
+
+  .feature-title {
+    margin-bottom: 50px;
+
+    span {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-size: 55px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+
+    }
+  }
+
+  .feature-style-3 {
+    margin-bottom: 30px;
+    padding: 40px 30px;
+    border: 2px dashed $gray-3;
+    border-radius: 10px;
+    background: $white-color;
+    text-align: center;
+    @include transition(.3s);
+
+    &:hover {
+      border-color: $primary-color;
+      @include box-shadow(0 10px 25px rgba(0, 0, 0, .1));
+
+      .feature-icon {
+        background-color: $primary-color;
+        color: $white-color;
+      }
+    }
+
+    .feature-icon {
+      background-color: $primary-light;
+      color: $primary-color;
+      width: 70px;
+      height: 70px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+      font-size: 35px;
+      margin: 0 auto 20px;
+      @include transition(.3s);
+    }
+
+    .feature-content {
+
+      h3 {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+}

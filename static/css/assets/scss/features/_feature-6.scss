@@ -1,0 +1,42 @@
+// features css
+
+.feature-wrapper {
+
+  .feature-style-6 {
+    text-align: center;
+    padding: 60px 30px;
+    margin-bottom: 40px;
+    border: 1px solid $gray-4;
+    background: $white-color;
+    @include transition(.3s);
+
+    &:hover {
+      border-color: $success-color;
+      @include box-shadow(0 15px 35px rgba(0, 0, 0, .15));
+    }
+
+
+    .feature-icon {
+      width: 100px;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      background-color: $success-light;
+      color: $success-color;
+      margin: 0 auto 30px;
+      font-size: 40px;
+    }
+
+
+    .feature-content {
+
+      h3 {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+}

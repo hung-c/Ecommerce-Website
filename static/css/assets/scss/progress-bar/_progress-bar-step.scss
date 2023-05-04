@@ -1,0 +1,202 @@
+
+
+/*=====  Progress Bar Step =====*/
+
+.progress-bar-step{
+    & .step{
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        -webkit-box-pack: space-between;
+        -ms-flex-pack: space-between;
+        justify-content: space-between;
+        position: relative;
+
+        @media #{$xs}{
+            display: block;
+            padding-left: 40px;
+        }
+        
+        &::after,
+        &::before{
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 8px;
+            background-color: $gray-4;
+            top: 50%;
+            left: 0;
+            @include transform(translateY(-50%));
+            border-radius: 4px;
+
+            @media #{$xs}{
+                width: 8px;
+                height: 100%;
+                top: 0;
+                left: 0;
+                @include transform(translateY(0%));
+            }
+        }
+        
+        &::after{
+            width: 0;
+            background-color: $secondary-2-color;
+        }
+        
+        & li{            
+
+            & + li{
+                @media #{$xs}{
+                    margin-top: 50px;
+                }
+            }
+
+            & .heading-6{
+                padding-bottom: 16px;
+                color: $dark-variant;
+                
+                @media #{$xs}{
+                    padding-bottom: 0;
+                }
+            }
+            & p{
+                padding-top: 16px;
+                color: $dark-variant;
+                
+                @media #{$xs}{
+                    padding-top: 0;
+                }
+            }
+            
+            &:last-child{
+                text-align: right;
+
+                @media #{$xs}{
+                    text-align: left;
+                }
+            }
+        }
+    }
+    
+    &.ordered{
+        & .step{ 
+            &::after{
+                width: 3%;
+                background-color: $secondary-1-color;
+
+                @media #{$xs}{
+                    width: 8px;
+                    height: 7%;
+                }
+            }           
+            & li{
+                &:nth-of-type(1){
+                    & .heading-6{
+                        color: $secondary-1-color;
+                    }
+                }
+            }
+        }
+    }
+    
+    &.ready{
+        & .step{
+            &::after{
+                width: 32%;
+                background-color: $info-color;
+
+                @media #{$xs}{
+                    width: 8px;
+                    height: 37%;
+                }
+            }
+            & li{
+                &:nth-of-type(1),
+                &:nth-of-type(2){
+                    & .heading-6{
+                        color: $info-color;
+                    }
+                }
+            }
+        }
+    }
+    
+    &.shipped{
+        & .step{
+            &::after{
+                width: 63%;
+                background-color: $secondary-2-color;
+
+                @media #{$xs}{
+                    width: 8px;
+                    height: 66%;
+                }
+            }
+            & li{
+                &:nth-of-type(1),
+                &:nth-of-type(2),
+                &:nth-of-type(3){
+                    & .heading-6{
+                        color: $secondary-2-color;
+                    }
+                }
+            }
+        }
+    }
+    
+    &.delivered{
+        & .step{
+            &::after{
+                width: 100%;
+                background-color: $success-color;
+
+                @media #{$xs}{
+                    width: 8px;
+                    height: 100%;
+                }
+            }
+            & li{
+                &:nth-of-type(1),
+                &:nth-of-type(2),
+                &:nth-of-type(3),
+                &:nth-of-type(4){
+                    & .heading-6{
+                        color: $success-color;
+                    }
+                }
+            }
+        }
+    }
+    
+    &.dark-step{
+        & .step{
+            &::before{
+                background-color: rgba($white-color, 0.24);
+            }
+            
+            & li{
+                & .heading-6{
+                    color: rgba($white-color, 0.74);
+                }
+                & p{
+                    color: rgba($white-color, 0.74);
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,256 @@
+
+/*=====  Pricing  Style 10 =====*/
+
+
+.pricing-tab{
+    
+    & .title{}
+    & .pricing-tab-menu{}
+    & .nav{
+        max-width: 280px;
+        width: 100%;
+        border: 1px solid $white-light;
+        padding: 5px;
+        border-radius: 50px;
+        overflow: hidden;
+        margin-top: 24px;
+        
+        & li{
+            width: 50%;
+            display: block;
+            
+            & a{
+                display: block;
+                width: 100%;
+                height: 40px;
+                line-height: 40px;
+                color: $dark-light;
+                text-align: center;
+                border-radius: 50px;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                font-weight: 500;
+                font-size: 14px;
+                @include transition(0.3s);
+                
+                @media #{$lg}{
+                    font-size: 13px;
+                }
+                
+                &.active{
+                    background-color: $primary-color;
+                    color: $white-color;
+                }
+            }
+        }
+    }
+    & p{
+        color: $dark-color;
+        margin-top: 16px;
+    }
+}
+
+.pricing-style-10{
+    position: relative;
+    
+    & .pricing-plan-list{
+        position: absolute;
+        width: 33.33%;
+        left: -33.33%;
+        bottom: 0;
+        
+        @media #{$md}{
+            display: none;
+        }tom: 0;
+        
+        @media #{$xs}{
+            display: none;
+        }
+        
+         & ul{
+            & li{
+                margin-top: 14px;
+                
+                & .list-title{
+                    font-size: 16px;
+                    line-height: 22px;
+                    color: $dark-color;
+                    z-index: 9;
+                }
+            }
+        }
+    }
+    
+    & .single-pricing-plan{
+        margin-top: 30px;
+
+        & .pricing-plan-img{
+            padding: 0px 30px 30px;
+
+            & img{
+                width: 72px;
+            }
+            & .title{
+                font-size: 20px;
+                font-family: $font-1;
+                line-height: 28px;
+                font-weight: 400;
+                color: $dark-color;
+                margin-top: 25px;
+            }
+            & .price{
+                font-weight: 300;
+                font-size: 14px;
+                color: rgba($dark-color, 0.88);
+                margin-top: 8px;
+
+                & strong{
+                    font-weight: 500;
+                    font-size: 36px;
+                    line-height: 45px;
+                    color: $dark-color;
+                }
+            }
+            & .main-btn{
+                margin-top: 24px;
+            }
+        }
+
+        & .pricing-list{
+            border-left: 1px solid $gray-2;
+
+            @media #{$xs}{
+                border-left: 0;
+            }
+
+            & ul{
+                & li{
+                    margin-top: 14px;
+
+                    @media #{$xs}{
+                        margin: -1px;
+                        border: 1px solid $gray-2;
+                        padding: 12px 10px;
+                    }
+
+                    & .list-title{
+                        font-size: 16pxx;
+                        line-height: 22px;
+                        color: $dark-color;
+                        display: none;
+                        padding-bottom: 8px;
+
+                        @media #{$md}{
+                            display: block;
+                        }
+                        @media #{$xs}{
+                            display: block;
+                        }
+                    }
+                    & .list-value{
+                        font-size: 16px;
+                        line-height: 22px;
+                        color: $dark-color;
+
+                        & i{
+                            font-size: 24px;
+                        }
+
+                        & .mdi-check{
+                            color: $caution-color;
+                        }
+                        & .mdi-close{
+                            color: $error-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*=====  Pricing  Style Dark 10 =====*/
+
+.pricing-tab-dark{
+    & .title{
+        color: $white-color;
+    }
+    & .pricing-tab-menu{}
+    & .nav{
+        border: 1px solid rgba($white-color, 0.16);
+        
+        & li{            
+            & a{
+                color: rgba($white-color, 0.6);
+
+                &.active{
+                    background-color: $secondary-2-color;
+                    color: $white-color;
+                }
+            }
+        }
+    }
+    & p{
+        color: rgba($white-color, 0.74);
+    }
+}
+
+.pricing-style-dark-10{
+    & .pricing-plan-list{        
+         & ul{
+            & li{                
+                & .list-title{
+                    color: rgba($white-color, 0.74);
+                }
+            }
+        }
+    }
+    
+    & .single-pricing-plan{
+
+        & .pricing-plan-img{
+            & .title{
+                color: $white-color;
+            }
+            & .price{
+                color: rgba($white-color, 0.88);
+
+                & strong{
+                    color: $white-color;
+                }
+            }
+        }
+
+        & .pricing-list{
+            & ul{
+                & li{
+                    & .list-title{
+                        color: $white-color;
+                    }
+                    & .list-value{
+                        color: $white-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

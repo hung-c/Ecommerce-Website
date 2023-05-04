@@ -1,0 +1,29 @@
+// call to action css
+
+.cta-style-1 {
+
+  .cta-style-1-wrapper {
+    padding: 70px 50px;
+
+    @media #{$xs} {
+      padding: 70px 30px;
+    }
+
+    .cta-content {
+
+      @media #{$md} {
+        margin-bottom: 50px;
+      }
+      @media #{$xs} {
+        margin-bottom: 50px;
+      }
+
+      h1 {
+        @media #{$xs} {
+          font-size: 38px;
+        }
+      }
+    }
+  }
+
+}

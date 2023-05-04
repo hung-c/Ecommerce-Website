@@ -1,0 +1,109 @@
+
+
+/*===== All Header Style 9 =====*/
+
+
+.header-style-9{
+    position: relative;
+    
+    & .header-wrapper{
+        height: 720px;
+        position: relative;
+
+        @media #{$lg}{
+            height: 620px;
+        }
+        @media #{$md}{
+            height: 620px;
+        }
+        @media #{$xs}{
+            height: 620px;
+        }
+
+        & .header-content {
+            position: absolute;
+            top: 50%;
+            @include transform(translateY(-50%));
+            left: 0;
+            right: 0;
+            max-width: 480px;
+            width: 100%;
+            padding: 44px;
+            background-color: rgba($dark-color, 0.64);
+            margin: 0 auto;
+
+            @media #{$lg}{
+                max-width: 380px;
+            }
+            @media #{$xs}{
+                max-width: 80%;
+                padding: 24px;
+            }
+
+            & .title{
+                font-weight: 300;
+                font-size: 44px;
+                line-height: 55px;
+                color: $white-color;
+                text-transform: uppercase;
+    
+                @media #{$lg}{
+                    font-size: 30px;
+                    line-height: 40px;
+                }
+                @media #{$xs}{
+                    font-size: 24px;
+                    line-height: 30px;
+                }
+                @media #{$sm}{
+                    font-size: 36px;
+                    line-height: 35px;
+                }
+            }
+
+            & .header-link{
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 24px;
+                letter-spacing: 0.08em;
+                text-transform: uppercase;
+                color: $secondary-2-color;
+                margin-top: 25px;
+    
+                @media #{$lg}{
+                    margin-top: 20px;
+                }
+                @media #{$xs}{
+                    margin-top: 12px;
+                    font-size: 14px;
+                }
+    
+                & i{
+                    margin-left: 5px;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    & .header-mini{
+        margin-top: -120px;
+        position: relative;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

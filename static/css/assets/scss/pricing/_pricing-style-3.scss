@@ -1,0 +1,116 @@
+
+/*=====  Pricing  Style 3 =====*/
+
+.pricing-style-3{
+    padding: 30px;
+    background: $white-color;
+    @include box-shadow (2px 2px 8px rgba($dark-color, 0.32));
+    border-radius: 8px;
+    
+    & .pricing-header{
+        padding: 0 50px;
+        
+        @media #{$lg}{
+            padding: 0 30px;
+        }
+        @media #{$xs}{
+            padding: 0 30px;
+        }
+        @media #{$sm}{
+            padding: 0 50px;
+        }
+        
+        & .title{}
+        
+        & img{
+            width: 100%;
+            margin-top: 10px;
+        }
+    }
+    & .pricing-body{
+        margin-top: 25px;
+        
+        
+        & .pricing-list{
+            margin-top: 25px;
+            
+            & li{
+                font-size: 16px;
+                line-height: 22px;
+                color: $dark-light;
+                margin-top: 10px;
+                
+                & i{
+                    margin-right: 10px;
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+    & .pricing-footer{
+        margin-top: 30px;
+        
+        & .price{
+            font-size: 16px;
+            line-height: 22px;
+            color: $dark-light;
+            
+            & strong{
+                font-weight: 500;
+                font-size: 36px;
+                line-height: 45px;
+                color: $dark-color;
+            }
+        }
+        
+        & .main-btn{
+            margin-top: 15px;
+        }
+    }
+}
+
+/*=====  Pricing  Style Dark 3 =====*/
+
+.pricing-style-dark-3{
+    background-color: $secondary-3-variant;
+    
+    & .pricing-header{        
+        & .title{
+            color: $white-color;
+        }
+    }
+    & .pricing-body{
+        & .pricing-list{            
+            & li{
+                color: rgba($white-color, 0.6);
+                
+                & i{
+                    color: $secondary-1-color;
+                }
+            }
+        }
+    }
+    & .pricing-footer{        
+        & .price{
+            color: rgba($white-color, 0.6);
+            
+            & strong{
+                color: $white-color;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

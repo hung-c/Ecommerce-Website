@@ -1,0 +1,128 @@
+
+
+/*===== All Product Style 22 =====*/
+
+.product-style-22{
+    background-color: $secondary-3-variant;
+    border-radius: 8px;
+
+    @media #{$xs}{        
+        display: block;
+    }
+    & .product-image{
+        position: relative;
+
+        & img{
+            width: 100%;
+        }
+    }
+
+    & .product-content{
+        position: relative;
+        z-index: 5;
+        padding: 20px 20px 25px;
+
+        @media #{$lg}{
+            padding: 20px 15px 25px;
+        }
+        @media #{$md}{
+            padding: 20px 15px 25px;
+        }
+        @media #{$xs}{
+            padding: 20px 10px 25px;
+        }
+
+        & .title{
+            & a{
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 30px;
+                color: $white-color;
+                @include transition(0.3s);
+                margin-top: 8px;
+
+                @media #{$lg}{
+                    line-height: 22px;
+                }
+
+                @media #{$lg}{
+                    font-size: 20px;
+                }
+                @media #{$md}{
+                    font-size: 20px;
+                }
+                @media #{$xs}{
+                    font-size: 18px;
+                }
+
+                &:hover{
+                    color: $secondary-1-color;
+                }
+            }
+        }
+        & p{
+            color: rgba($white-color, 0.74);
+            font-size: 14px;
+            line-height: 22px;
+            font-weight: 400;
+            margin-top: 8px;
+        }
+
+        & .product-price-btn{
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: space-between;
+            -ms-flex-pack: space-between;
+            justify-content: space-between;
+
+
+            & .price{
+                font-weight: 500;
+                font-size: 24px;
+                color: $secondary-2-color ;
+                line-height: 30px;
+                margin-top: 16px;
+                display: block;
+                margin-right: 16px;
+
+                @media #{$lg}{
+                    font-size: 20px;
+                    margin-right: 8px;
+                    margin-top: 8px;
+                }
+            }
+            & .main-btn{
+                margin-top: 16px;
+                font-weight: 700;
+                letter-spacing: 0;
+                text-transform: capitalize;
+
+                @media #{$lg}{
+                    margin-top: 8px;
+                }
+            }        
+        }        
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,184 @@
+
+
+/*===== All Header Style 5 =====*/
+
+
+.header-style-5{
+    position: relative;
+
+    .tns-nav {
+        position: absolute;
+        bottom: 30px;
+        left: 0;
+        width: 100%;
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        button {
+            background: rgba($dark-color, 0.38);
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            font-size: 0;
+            border: 0;
+            @include transition(0.3s);
+            margin: 0 10px;
+    
+            &.tns-nav-active {
+                background-color: $secondary-2-color;
+                @include transform(scale(2));
+            }
+        }
+    }
+
+    & .header-5-active{
+        & .header-image{
+            height: 720px;
+
+            @media #{$xs}{
+                height: 620px;
+            }
+        }
+
+        & .slick-dots{
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            @include transform(translateX(-50%));
+            z-index: 9;
+
+            & li{    
+                display: inline-block;
+                margin: 0 10px;
+
+                & button{
+                    background: rgba($dark-color, 0.38);
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    font-size: 0;
+                    border: 0;
+                    @include transition(0.3s);
+                }
+
+                &.slick-active{
+                    & button{
+                        background-color: $secondary-2-color;
+                        @include transform(scale(2));
+                    }
+                }
+            }
+        }
+    }    
+
+    & .single-header{
+        height: 672px;
+        position: relative;
+
+        @media #{$md}{
+            height: 570px;
+        }
+        @media #{$xs}{
+            height: 570px;
+        }
+
+        & .header-content{
+            width: 480px;
+            background-color: rgba($dark-color, 0.64);
+            padding: 30px;
+            position: absolute;
+            bottom: 20%;
+            right: 0;
+
+            @media #{$xs}{
+                width: 90%;
+            }
+            @media #{$sm}{
+                width: 380px;
+            }
+
+            & .title{
+                font-weight: 300;
+                font-size: 44px;
+                line-height: 55px;
+                color: $white-color;
+
+                @media #{$xs}{
+                    font-size: 30px;
+                    line-height: 35px;
+                }
+                @media #{$sm}{
+                    font-size: 40px;
+                    line-height: 48px;
+                }
+            }
+            & .content-link{                
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 24px;
+                letter-spacing: 0.08em;
+                text-transform: uppercase;
+                margin-top: 30px;
+                color: $secondary-2-color;
+
+                @media #{$xs}{
+                    margin-top: 25px;
+                    font-size: 14px;
+                }
+                
+                & i{
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+
+    & .header-mini{
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        -moz-flex-wrap: wrap;
+        flex-wrap: wrap;
+
+        & .header-mini-items{
+            width: 25%;
+            @include box-shadow (0px 2px 4px rgba($dark-color, 0.08));
+            background-color: $white-color;
+
+            @media #{$md}{
+                width: 50%;
+            }
+            @media #{$xs}{
+                width: 100%;
+            }
+            @media #{$sm}{
+                width: 50%;
+            }
+
+
+        }
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

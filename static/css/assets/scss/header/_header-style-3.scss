@@ -1,0 +1,115 @@
+
+
+/*===== All Header Style 3 =====*/
+
+
+.header-style-3{
+
+    .tns-nav {
+        position: absolute;
+        bottom: 30px;
+        left: 0;
+        width: 100%;
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        button {
+            background: rgba($dark-color, 0.38);
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            font-size: 0;
+            border: 0;
+            @include transition(0.3s);
+            margin: 0 10px;
+    
+            &.tns-nav-active {
+                background-color: $primary-color;
+                @include transform(scale(2));
+            }
+        }
+    }
+
+    & .content-active{
+        & .slick-dots{
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            @include transform(translateX(-50%));
+            z-index: 9;
+
+            & li{    
+                display: inline-block;
+                margin: 0 10px;
+
+                & button{
+                    background: rgba($dark-color, 0.38);
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    font-size: 0;
+                    border: 0;
+                    @include transition(0.3s);
+                }
+
+                &.slick-active{
+                    & button{
+                        background-color: $secondary-2-color;
+                        @include transform(scale(2));
+                    }
+                }
+            }
+        }
+    }
+    
+
+    & .header-mini{
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        -moz-flex-wrap: wrap;
+        flex-wrap: wrap;
+
+        & .header-mini-item{
+            width: 25%;
+
+            @media #{$md}{
+                width: 50%;
+            }
+            @media #{$xs}{
+                width: 100%;
+            }
+            @media #{$sm}{
+                width: 50%;
+            }
+
+            & .product-image{
+                & img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

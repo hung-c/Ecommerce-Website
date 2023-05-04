@@ -1,0 +1,211 @@
+
+
+/*===== All Footer Style 6 =====*/
+
+
+.footer-style-6{
+    background-color: $white-variant;
+
+    & .footer-widget-subscribe{
+        margin-top: 32px;
+
+        & p{
+            margin-top: 16px;
+        }
+
+        & .subscribe-form{
+            & .single-form{
+                & .form-input{
+                    position: relative;
+
+                    & .main-btn{
+                        width: 40px;
+                        height: 40px;
+                        line-height: 40px;
+                        color: $white-color;
+                        font-size: 24px;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        padding: 0;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+    
+    & .footer-social-copyright{
+        & p{
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 22px;
+            color: $dark-color;
+            @include transition(0.3s);
+            margin-top: 24px;
+
+            & a{
+                color: $dark-color;
+                @include transition(0.3s);
+
+                &:hover{
+                    color: $primary-color;
+                }
+            }
+        }
+        
+        & .footer-social{
+            margin-top: 30px;
+
+            & li{
+                display: inline-block;
+                margin-left: 8px;
+
+                & a{
+                    font-size: 20px;
+                    color: $primary-color;
+
+                    @media #{$xs}{
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    & .footer-title{
+        text-transform: capitalize;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 28px;
+        color: $dark-color;
+    }
+
+    & .footer-link-widget{
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        -moz-flex-wrap: wrap;
+        flex-wrap: wrap;        
+
+        & .footer-link{
+            margin-top: 32px;
+            width: 25%;
+
+            @media #{$xs}{
+                width: 100%;
+            }
+            @media #{$sm}{
+                width: 33.33%;
+            }
+    
+            & .link{
+                padding-top: 16px;
+    
+                & li{
+                    padding: 4px 0;
+
+                    & a{
+                        font-weight: 500;
+                        font-size: 16px;
+                        line-height: 22px;
+                        color: $dark-color;
+                        @include transition(0.3s);
+
+                        @media #{$md}{
+                            font-size: 14px;
+                        }
+
+                        &:hover{
+                            color: $primary-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+/*===== All Footer Style Dark 6 =====*/
+
+.footer-dark-style-6{
+    background-color: $dark-variant;
+
+    & .footer-widget-subscribe{
+        & p{
+            color: $white-color;
+        }
+
+        & .subscribe-form{
+            & .single-form{
+                & .form-input{
+                    & input{
+                        &:focus{
+                            border-color: $secondary-1-color ;
+                        }
+                    }
+                }
+            }
+        }  
+    }
+    & .footer-social-copyright{
+        & p{
+            color: $white-color;
+
+            & a{
+                color: $white-color;
+                @include transition(0.3s);
+
+                &:hover{
+                    color: $secondary-1-color;
+                }
+            }
+        }
+        
+        & .footer-social{
+            & li{
+                & a{
+                    color: $white-color;
+                }
+            }
+        }
+    }
+
+    & .footer-title{
+        color: rgba($white-color, 0.74);
+    }
+    & .footer-link-widget{
+        & .footer-link{    
+            & .link{    
+                & li{
+                    & a{
+                        color: $white-color;
+
+                        &:hover{
+                            color: $secondary-1-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,169 @@
+
+
+/*===== All Header Style 7 =====*/
+
+
+.header-style-7{
+    position: relative;
+
+    .tns-nav {
+        position: absolute;
+        top: 50%;
+        @include transform(translateY(-50%));
+        right: 30px;
+        height: 100%;
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    
+        button {
+            background: rgba($white-color, 0.38);
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            font-size: 0;
+            border: 0;
+            @include transition(0.3s);
+            margin: 10px 0px;
+    
+            &.tns-nav-active {
+                background-color: $secondary-2-color;
+                @include transform(scale(2));
+            }
+        }
+    }
+    
+    & .header-7-active{
+        & .single-header{
+            height: 720px;
+            position: relative;
+
+            @media #{$lg}{
+                height: 520px;
+            }
+            @media #{$md}{
+                height: 520px;
+            }
+            @media #{$xs}{
+                height: 420px;
+            }
+            @media #{$sm}{
+                height: 520px;
+            }
+
+            & .header-content{
+                padding: 44px;
+                background-color: rgba($dark-color, 0.64);
+                max-width: 480px;
+                position: absolute;
+                top: 50%;
+                @include transform(translateY(-50%));
+                left: 0;
+        
+                @media #{$lg}{
+                    max-width: 380px;
+                }
+                @media #{$xs}{
+                    max-width: 90%;
+                    padding: 25px;
+                }
+                @media #{$sm}{
+                    max-width: 380px;
+                    padding: 40px;
+                }
+        
+                & .title{
+                    font-weight: 300;
+                    font-size: 44px;
+                    line-height: 55px;
+                    color: $white-color;
+        
+                    @media #{$lg}{
+                        font-size: 30px;
+                        line-height: 40px;
+                    }
+                    @media #{$xs}{
+                        font-size: 30px;
+                        line-height: 40px;
+                    }
+                    @media #{$sm}{
+                        font-size: 40px;
+                        line-height: 50px;
+                    }
+                }
+                & .header-link{
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 24px;
+                    letter-spacing: 0.08em;
+                    text-transform: uppercase;
+                    color: $secondary-2-color;
+                    margin-top: 25px;
+        
+                    @media #{$lg}{
+                        margin-top: 20px;
+                    }
+                    @media #{$xs}{
+                        margin-top: 20px;
+                        font-size: 14px;
+                    }
+        
+                    & i{
+                        margin-left: 5px;
+                        font-size: 20px;
+                    }
+                }
+            } 
+        }
+
+        & .slick-dots{
+            position: absolute;
+            top: 50%;
+            right: 30px;
+            @include transform(translateY(-50%));
+            z-index: 9;
+
+            & li{    
+                & button{
+                    background: rgba($white-color, 0.38);
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    font-size: 0;
+                    border: 0;
+                    @include transition(0.3s);
+                }
+
+                &.slick-active{
+                    & button{
+                        background-color: $secondary-2-color;
+                        @include transform(scale(2));
+                    }
+                }
+            }
+        }
+    }
+    
+    & .header-min{
+        margin-top: -120px;
+        position: relative;
+    } 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

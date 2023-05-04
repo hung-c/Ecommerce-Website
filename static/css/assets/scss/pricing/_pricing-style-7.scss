@@ -1,0 +1,106 @@
+
+/*=====  Pricing  Style 7 =====*/
+
+.pricing-style-7{
+    background: $white-color;
+    @include box-shadow (2px 2px 8px rgba($dark-color, 0.32));
+    border-radius: 8px;
+    overflow: hidden;
+    
+    & .pricing-header{
+        
+        & .title{
+            background-color: $secondary-1-color;
+            height: 62px;
+            line-height: 62px;
+            color: $white-color;
+        }
+        
+        & img{
+            width: 130px;
+            padding: 30px 0;
+        }
+        & .pricing{
+            & .price{
+                font-size: 16px;
+                line-height: 22px;
+                color: $dark-light;
+                margin-top: 10px;
+
+                & strong{
+                    font-weight: 500;
+                    font-size: 36px;
+                    line-height: 45px;
+                    color: $dark-color;
+                }
+            }
+        }
+    }
+    & .pricing-body{
+        padding: 0px 30px 0px;
+        
+        & .pricing-list{
+            margin-top: 25px;
+            
+            & li{
+                font-size: 16px;
+                line-height: 22px;
+                color: $dark-light;
+                margin-top: 10px;
+                
+                & i{
+                    margin-right: 10px;
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+    & .pricing-footer{
+        padding: 30px 30px;
+        
+        & .main-btn{
+            margin-top: 15px;
+        }
+    }
+}
+
+
+/*=====  Pricing  Style Dark 7 =====*/
+
+.pricing-style-dark-7{
+    background-color: $secondary-3-variant;
+
+    & .pricing-header{
+        & .pricing{
+            & .price{
+                color: rgba($white-color, 0.6);
+            
+                & strong{
+                    color: $white-color;
+                }
+            }
+        }
+    }
+    & .pricing-body{        
+        & .pricing-list{            
+            & li{
+                color: rgba($white-color, 0.6);
+                
+                & i{
+                    color: $secondary-1-color;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+

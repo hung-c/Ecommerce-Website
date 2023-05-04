@@ -1,0 +1,67 @@
+// features css
+
+
+.feature-wrapper {
+
+  .feature-7-title {
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 50px;
+
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 60px;
+      height: 3px;
+      background: $primary-color;
+      left: 0;
+      bottom: 0;
+    }
+  }
+
+  .feature-style-7 {
+    display: flex;
+    margin-bottom: 50px;
+
+    &:hover {
+      .feature-icon {
+        animation: anim 1s linear infinite;
+      }
+    }
+
+    .feature-icon {
+      font-size: 50px;
+      line-height: 45px;
+      margin-bottom: 20px;
+      margin-right: 20px;
+      color: $primary-color;
+      @include transition(.3s);
+    }
+
+    .feature-content {
+
+
+      h3 {
+        font-size: 20px;
+        font-weight: 500;
+        color: $primary-color;
+        margin-bottom: 12px;
+      }
+    }
+  }
+}
+
+@keyframes anim {
+  0% {
+    @include transform(scale(1));
+  }
+
+  50% {
+    @include transform(scale(.8));
+  }
+
+  100% {
+    @include transform(scale(1));
+  }
+}

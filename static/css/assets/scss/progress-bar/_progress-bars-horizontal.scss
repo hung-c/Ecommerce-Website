@@ -1,0 +1,212 @@
+
+
+/*=====  Progress Bar Style 01 =====*/
+
+.single-progress-bar-horizontal{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    
+    @media #{$xs}{
+        display: block;
+    }
+    @media #{$sm}{
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+    }
+    
+    & .progress-text{
+        padding-right: 10px;
+        
+        @media #{$xs}{
+            padding-bottom: 10px;
+        }
+        @media #{$sm}{
+            padding-bottom: 0;
+        }
+        
+        & p{
+            font-weight: 500;
+            font-size: 14px;
+        }
+    }
+    & .progress-bar-inner{
+                
+        & .bar-inner{
+            width: 255px;
+            height: 20px;
+            border-radius: 50px;
+            background-color: $gray-4;
+            position: relative;
+            overflow: hidden;
+            
+            &.bar-inner-2{
+                height: 26px;
+            }
+
+            & .progress-horizontal{
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                border-radius: 50px;
+                @include transition(1s);
+                width: 0;
+                position: relative;
+                                
+                & i{
+                    font-size: 16px;
+                    line-height: 20px;
+                    color: $white-color;
+                    position: absolute;
+                    top: 50%;
+                    right: 5px;
+                    @include transform(translateY(-50%));
+                }
+            }
+        }
+    }
+    & .progress-track{
+        padding-left: 10px;
+
+        @media #{$xs}{
+            padding-top: 10px;
+            padding-left: 0;
+        }
+        @media #{$sm}{
+            padding-top: 0;
+            padding-left: 10px;
+        }
+
+        & p{
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            color: $primary-color;
+            text-transform: uppercase;
+        }
+    }
+
+    &.shipped{
+        & .progress-text{            
+            & p{
+                color: $secondary-2-color;
+            }
+        }
+        & .progress-bar-inner{
+            & .bar-inner{    
+                & .progress-horizontal{
+                    background-color: $secondary-2-color;
+                    width: 50%;
+                }
+            }
+        }
+    }
+    &.cancelled{
+        & .progress-text{            
+            & p{
+                color: $error-color;
+            }
+        }
+        & .progress-bar-inner{
+            & .bar-inner{    
+                & .progress-horizontal{
+                    background-color: $error-color;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    &.ready{
+        & .progress-text{            
+            & p{
+                color: $info-color;
+            }
+        }
+        & .progress-bar-inner{
+            & .bar-inner{    
+                & .progress-horizontal{
+                    background-color: $info-color;
+                    width: 30%;
+                }
+            }
+        }
+    }
+    &.ordered{
+        & .progress-text{            
+            & p{
+                color: $secondary-1-color;
+            }
+        }
+        & .progress-bar-inner{
+            & .bar-inner{    
+                & .progress-horizontal{
+                    background-color: $secondary-1-color;
+                    width: 15%;
+                }
+            }
+        }
+    }
+    &.delivered{
+        & .progress-text{            
+            & p{
+                color: $success-color;
+            }
+        }
+        & .progress-bar-inner{
+            & .bar-inner{    
+                & .progress-horizontal{
+                    background-color: $success-color;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    &.refunded{
+        & .progress-text{            
+            & p{
+                color: $success-color;
+            }
+        }
+        & .progress-bar-inner{
+            & .bar-inner{    
+                & .progress-horizontal{
+                    background-color: $success-color;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    
+    &.dark-progress{
+        & .progress-bar-inner{
+            & .bar-inner{
+                background-color: rgba($white-color, 0.24);
+            }
+        }
+        & .progress-track{    
+            & p{
+                color: $secondary-1-color;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
