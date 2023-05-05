@@ -1,5 +1,5 @@
 /*=====  Common Style =====*/
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans:300,400,500,700,900&display=swap');
 
 body {
   font-family: $font-1;
@@ -149,4 +149,9 @@ background: $white-color;
     color: $white-color;
     font-size: 30px;
   }
+
+}
+
+.table-responsive {
+  max-height: 200px;
 }

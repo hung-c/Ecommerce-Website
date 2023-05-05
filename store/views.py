@@ -6,8 +6,7 @@ import json
 import datetime
 # Create your views here.
 def home(request):
-    context = {'pageName': 'home'}
-    print(context['pageName'])
+    context = {}
     return render(request, 'store/home.html', context)
 
 def store(request):
@@ -17,7 +16,7 @@ def store(request):
     items = data['items']
 
     products = Product.objects.all()
-    context = {'products': products, 'cartItems':cartItems, 'pageName': 'hots'}
+    context = {'products': products, 'cartItems':cartItems}
     return render(request, 'store/store.html', context)
 
 def cart(request):  
@@ -91,3 +90,7 @@ def processOrder(request):
         )
     
     return JsonResponse('Payment submitted..', safe=False)
+
+def productDetail(request):
+    context = {'size':[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+    return render(request, 'store/product.html', context)

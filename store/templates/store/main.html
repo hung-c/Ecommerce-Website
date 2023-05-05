@@ -2,69 +2,69 @@
 {% load static %}
 <html lang="en">
 <head>
-    <!-- Cookies Functions -->
-    <script type="text/javascript"> 
-      var user = '{{request.user}}'
+  <!-- Cookies Functions -->
+  <script type="text/javascript"> 
+    var user = '{{request.user}}'
 
-      function getCookie(name) {
-        // Split cookie string and get all individual name=value pairs in an array
-        var cookieArr = document.cookie.split(";");
-        
-        // Loop through the array elements
-        for(var i = 0; i < cookieArr.length; i++) {
-            var cookiePair = cookieArr[i].split("=");
+    function getCookie(name) {
+      // Split cookie string and get all individual name=value pairs in an array
+      var cookieArr = document.cookie.split(";");
+      
+      // Loop through the array elements
+      for(var i = 0; i < cookieArr.length; i++) {
+          var cookiePair = cookieArr[i].split("=");
 
-            /* Removing whitespace at the beginning of the cookie name
-            and compare it with the given string */
-            if(name == cookiePair[0].trim()) {
-              // Decode the cookie value and return
-              return decodeURIComponent(cookiePair[1]);
-            }
-        }
-        // Return null if not found
-        return null;
+          /* Removing whitespace at the beginning of the cookie name
+          and compare it with the given string */
+          if(name == cookiePair[0].trim()) {
+            // Decode the cookie value and return
+            return decodeURIComponent(cookiePair[1]);
+          }
       }
-      var cart = JSON.parse(getCookie('cart'))
+      // Return null if not found
+      return null;
+    }
+    var cart = JSON.parse(getCookie('cart'))
 
-      if (cart == undefined){
-        cart = {}
-        console.log('Cart Created!', cart)
-        document.cookie ='cart=' + JSON.stringify(cart) + ";domain=;path=/"
-      }
-      console.log('Cart:', cart)
-    </script>
+    if (cart == undefined){
+      cart = {}
+      console.log('Cart Created!', cart)
+      document.cookie ='cart=' + JSON.stringify(cart) + ";domain=;path=/"
+    }
+    console.log('Cart:', cart)
+  </script>
 
-    <title>Make It Real</title>
-    <meta charset="UTF-8">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Make It Real</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!--====== Favicon Icon ======-->
-    <link rel="shortcut icon" href="{% static 'css/assets/images/favicon.png' %}" type="image/png">
+  <!--====== Favicon Icon ======-->
+  <link rel="shortcut icon" href="{% static 'css/assets/images/favicon.png' %}" type="image/png">
 
-    <!--====== Tiny Slider CSS ======-->
-    <link rel="stylesheet" href="{% static 'css/assets/css/tiny-slider.css' %}">
+  <!--====== Tiny Slider CSS ======-->
+  <link rel="stylesheet" href="{% static 'css/assets/css/tiny-slider.css' %}">
 
-    <!--====== Line Icons CSS ======-->
-    <link rel="stylesheet" href="{% static 'css/assets/css/LineIcons.css' %}">
+  <!--====== Line Icons CSS ======-->
+  <link rel="stylesheet" href="{% static 'css/assets/css/LineIcons.css' %}">
 
-    <!--====== Material Design Icons CSS ======-->
-    <link rel="stylesheet" href="{% static 'css/assets/css/materialdesignicons.min.css' %}">
+  <!--====== Material Design Icons CSS ======-->
+  <link rel="stylesheet" href="{% static 'css/assets/css/materialdesignicons.min.css' %}">
 
-    <!--====== Bootstrap CSS ======-->
-    <link rel="stylesheet" href="{% static 'css/assets/css/bootstrap.min.css' %}">
+  <!--====== Bootstrap CSS ======-->
+  <link rel="stylesheet" href="{% static 'css/assets/css/bootstrap.min.css' %}">
 
-    <!--====== gLightBox CSS ======-->
-    <link rel="stylesheet" href="{% static 'css/assets/css/glightbox.min.css' %}">
+  <!--====== gLightBox CSS ======-->
+  <link rel="stylesheet" href="{% static 'css/assets/css/glightbox.min.css' %}">
 
-    <!--====== nouiSlider CSS ======-->
-    <link rel="stylesheet" href="{% static 'css/assets/css/nouislider.min.css' %}">
+  <!--====== nouiSlider CSS ======-->
+  <link rel="stylesheet" href="{% static 'css/assets/css/nouislider.min.css' %}">
 
-    <!--====== Default CSS ======-->
-    <link rel="stylesheet" href="{% static 'css/assets/css/default.css' %}">
+  <!--====== Default CSS ======-->
+  <link rel="stylesheet" href="{% static 'css/assets/css/default.css' %}">
 
-    <!--====== Style CSS ======-->
-    <link rel="stylesheet" href="{% static 'css/assets/css/style.css' %}">
+  <!--====== Style CSS ======-->
+  <link rel="stylesheet" href="{% static 'css/assets/css/style.css' %}">
 
 </head>
 <body>
@@ -124,33 +124,7 @@
                 <li><a href="#0">Sneaker</a></li>
                 <li><a href="#0">Quần&nbsp;Áo</a></li>
                 <li><a href="#0">Phụ&nbsp;Kiện</a></li>
-                <li class="menu-item-has-children">
-                  <a href="#0" class="collapsed" data-bs-toggle="collapse" data-bs-target="#menuVertical7-5" aria-controls="menuVertical7-5" aria-expanded="false" aria-label="Toggle navigation">More <i class="mdi mdi-chevron-right"></i></a>
-                  <!-- sub menu Start -->
-                  <ul class="sub-menu collapse" id="menuVertical7-5">
-                    <li><a href="#0">Dropped Menu 1</a></li>
-                    <li class="menu-item-has-children">
-                      <a href="#0" class="collapsed" data-bs-toggle="collapse" data-bs-target="#menuVertical7-6" aria-controls="menuVertical7-6" aria-expanded="false" aria-label="Toggle navigation">Dropped Menu 2 <i class="mdi mdi-chevron-right"></i></a>
-                      <ul class="sub-menu collapse" id="menuVertical7-6">
-                        <li><a href="#0">Sub Dropped Menu 1</a></li>
-                        <li><a href="#0">Sub Dropped Menu 2</a></li>
-                        <li><a href="#0">Sub Dropped Menu 3</a></li>
-                        <li class="menu-item-has-children">
-                          <a href="#0" class="collapsed" data-bs-toggle="collapse" data-bs-target="#menuVertical7-7" aria-controls="menuVertical7-7" aria-expanded="false" aria-label="Toggle navigation">Sub Dropped Menu 4 <i class="mdi mdi-chevron-right"></i></a>
-                          <ul class="sub-menu collapse" id="menuVertical7-7">
-                            <li><a href="#0">Sub Dropped Menu 1</a></li>
-                            <li><a href="#0">Sub Dropped Menu 2</a></li>
-                            <li><a href="#0">Sub Dropped Menu 3</a></li>
-                            <li><a href="#0">Sub Dropped Menu 4</a></li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </li>
-                    <li><a href="#0">Dropped Menu 3</a></li>
-                    <li><a href="#0">Dropped Menu 4</a></li>
-                  </ul>
-                  <!-- sub menu Ends -->
-                </li>
+                <li><a href="#0">Sưu&nbsp;Tập</a></li>
               </ul>
             </div>
             <!-- navbar menu Ends -->
